@@ -5,7 +5,7 @@
 - `StructRisk/generated/magma_local_crash_backed_enriched_artifacts.jsonl`
 - `StructRisk/generated/magma_poc49_crash_backed_enriched_artifacts.jsonl` (component intermediate not bundled)
 
-The anonymous artifact includes the derived unified evidence-card slice and coverage summaries; larger public-PoC replay intermediates are not bundled.
+The public artifact includes the derived unified evidence-card slice and coverage summaries; larger public-PoC replay intermediates are not bundled.
 
 ## Coverage
 

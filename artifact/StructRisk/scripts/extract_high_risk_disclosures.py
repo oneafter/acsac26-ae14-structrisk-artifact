@@ -117,16 +117,6 @@ def summarize(record):
     }
 
 
-def redact_disclosure_urls(records):
-    redacted = []
-    for record in records:
-        copy = dict(record)
-        if copy.get('disclose_url'):
-            copy['disclose_url'] = '<URL-redacted-for-double-blind-review>'
-        redacted.append(copy)
-    return redacted
-
-
 def write_jsonl(path: Path, records):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('w', encoding='utf-8') as handle:
@@ -185,14 +175,12 @@ def main():
     parser.add_argument('--jsonl-out', default='StructRisk/generated/high_risk_disclosures.jsonl')
     parser.add_argument('--csv-out', default='StructRisk/generated/high_risk_disclosures.csv')
     parser.add_argument('--summary-out', default='StructRisk/generated/high_risk_disclosures_summary.md')
-    parser.add_argument('--keep-disclosure-urls', action='store_true', help='retain public issue/advisory URLs for non-anonymous releases')
+    parser.add_argument('--keep-disclosure-urls', action='store_true', help='accepted for compatibility; public issue/advisory URLs are always retained')
     args = parser.parse_args()
 
     records = load_xlsx_rows(Path(args.input))
     high = [summarize(r) for r in records if (r.get('highest_cvss31_severity') or '').upper() == 'HIGH']
     high.sort(key=lambda item: (item['project'], item['cve_id']))
-    if not args.keep_disclosure_urls:
-        high = redact_disclosure_urls(high)
     write_jsonl(Path(args.jsonl_out), high)
     write_csv(Path(args.csv_out), high)
     write_summary(Path(args.summary_out), high)

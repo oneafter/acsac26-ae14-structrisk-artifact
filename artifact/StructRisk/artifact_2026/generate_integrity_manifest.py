@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 EXCLUDED_NAMES = {'SHA256SUMS.txt', 'TREE.txt', 'PACKAGE_METADATA.json', '.DS_Store'}
-EXCLUDED_PARTS = {'__pycache__', 'reproduced', '.git'}
+EXCLUDED_PARTS = {'__pycache__', 'reproduced', '.git', '.idea'}
 
 
 def sha256(path: Path):
@@ -40,9 +40,12 @@ def main():
 
     root = Path(args.root).resolve()
     version_path = Path(__file__).resolve().parent / 'ARTIFACT_VERSION.txt'
+    version_lines = version_path.read_text(encoding='utf-8').splitlines()
     version = next(line.split(':', 1)[1].strip()
-                   for line in version_path.read_text(encoding='utf-8').splitlines()
+                   for line in version_lines
                    if line.startswith('Artifact version:'))
+    doi = next((line.split(':', 1)[1].strip()
+                for line in version_lines if line.startswith('DOI:')), None)
     claims = json.loads((version_path.parent / 'PAPER_CLAIMS.json').read_text(encoding='utf-8'))
     files = included_files(root)
     tree = '\n'.join(relative.as_posix() for relative in files) + '\n'
@@ -51,6 +54,7 @@ def main():
     (root / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
     metadata = {
         'artifact_version': version,
+        'artifact_doi': doi,
         'paper_submission': 154,
         'paper_sha256': args.paper_sha256 or claims['paper']['sha256'],
         'generated_at_utc': datetime.now(timezone.utc).isoformat(),

@@ -111,7 +111,7 @@ def write_summary(path: Path, input_paths, artifacts, findings, cards, source_co
         lines.append(f'- `{artifact_path(input_path)}`{suffix}')
     lines.extend([
         '',
-        'The anonymous artifact includes the derived unified evidence-card slice and coverage summaries; larger public-PoC replay intermediates are not bundled.',
+        'The public artifact includes the derived unified evidence-card slice and coverage summaries; larger public-PoC replay intermediates are not bundled.',
         '',
         '## Coverage',
         '',

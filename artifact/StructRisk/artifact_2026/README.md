@@ -1,6 +1,10 @@
-# Anonymous Artifact Package for `StructRisk`
+# Public Artifact Package for `StructRisk`
 
-This directory provides reviewer-facing scripts for exercising the `StructRisk` artifact for ACSAC 2026 submission #154. The maintenance version is recorded in `ARTIFACT_VERSION.txt`; `PAPER_CLAIMS.json` contains the expected values transcribed from the submitted PDF.
+[![DOI](https://zenodo.org/badge/1362349573.svg)](https://doi.org/10.5281/zenodo.23191951)
+
+Paper authors: **GuanJi Yue, Xuan Yang, Shikun Zhang** (Peking University).
+
+This directory provides reproduction scripts for exercising the `StructRisk` artifact for ACSAC 2026. The benchmark version is recorded in `ARTIFACT_VERSION.txt`; `PAPER_CLAIMS.json` contains the expected values transcribed from the submitted PDF.
 
 ## Scope
 
@@ -8,12 +12,12 @@ The package is designed to support four reproducibility goals without requiring 
 
 - Rebuild the paper's main evaluation tables from prepared ranked outputs.
 - Re-run the offline ranking pipeline from the prepared main-evaluation artifact index and shipped responses.
-- Audit the anonymized LLM prompts/responses and the replay-based CASR comparator reports.
+- Audit the leakage-controlled LLM prompts/responses and the replay-based CASR comparator reports.
 - Re-run the MAGMA crash-backed validation from shipped finding-level MAGMA slices and cached CVSS records.
 
-The full repository additionally contains broader MAGMA reconstruction utilities, but the anonymous reviewer package is centered on the shipped unified crash-backed MAGMA slice over 49 deduplicated findings across nine projects. The shipped MAGMA inventory audit covers 138 bug records and 125 distinct CVEs, with 84 HIGH-or-CRITICAL CVEs under the preferred NVD CVSS, plus a project-level inventory-versus-slice coverage table for the unified crash-backed slice.
+The full repository additionally contains broader MAGMA reconstruction utilities, but the public package is centered on the shipped unified crash-backed MAGMA slice over 49 deduplicated findings across nine projects. The shipped MAGMA inventory audit covers 138 bug records and 125 distinct CVEs, with 84 HIGH-or-CRITICAL CVEs under the preferred NVD CVSS, plus a project-level inventory-versus-slice coverage table for the unified crash-backed slice.
 
-The anonymous package is centered on processed main-evaluation artifacts rather than on re-fuzzing third-party projects from scratch.
+The public package is centered on processed main-evaluation artifacts rather than on re-fuzzing third-party projects from scratch. LLM prompts retain opaque finding IDs and exclude project names, CVE identifiers, public scores, public labels, disclosure links, and outcome fields to prevent evaluation leakage.
 
 ## What Is Included
 
@@ -27,10 +31,10 @@ The anonymous package is centered on processed main-evaluation artifacts rather 
 - `StructRisk/artifact_2026/verify_paper_claims.py`: non-destructive Table 3--6 verifier that writes regenerated outputs under `StructRisk/reproduced/`.
 - `StructRisk/artifact_2026/PAPER_CLAIMS.json`: exact submitted-PDF values used as verification expectations.
 - `StructRisk/artifact_2026/REPRODUCIBILITY_STATUS.md`: recomputed-versus-cached scope matrix.
-- `StructRisk/generated/phase1_llm_card_*.jsonl`, `StructRisk/generated/phase1_offline_llm_lcr_*`, and `StructRisk/generated/phase1_within10_llm_lcr_*`: anonymized LLM-card prompts/responses plus deterministic local tie-resolution audit outputs.
+- `StructRisk/generated/phase1_llm_card_*.jsonl`, `StructRisk/generated/phase1_offline_llm_lcr_*`, and `StructRisk/generated/phase1_within10_llm_lcr_*`: leakage-controlled LLM-card prompts/responses plus deterministic local tie-resolution audit outputs.
 - `StructRisk/generated/phase1_casr_reports/`: CASR reports, stderr logs, and timeout records for the replay-based comparator.
-- `StructRisk/user75_cve_summary.csv` and `StructRisk/user75_cve_tables.md`: anonymized CVE provenance tables covering CVE IDs, projects, CVSS/CNA/NVD status, and disclosure status.
-- `StructRisk/generated/high_risk_disclosure_alignment.*` and `StructRisk/generated/high_risk_disclosures_summary.md`: alignment summaries for the disclosure-backed HIGH cases; direct public issue/advisory URLs are redacted in the double-blind package and can be restored for the non-anonymous release.
+- `StructRisk/user75_cve_summary.csv` and `StructRisk/user75_cve_tables.md`: CVE provenance tables covering CVE IDs, projects, CVSS/CNA/NVD status, and disclosure status.
+- `StructRisk/generated/high_risk_disclosure_alignment.*` and `StructRisk/generated/high_risk_disclosures_summary.md`: alignment summaries for the disclosure-backed HIGH cases, including public issue/advisory URLs from the official CVE records.
 - `StructRisk/external/magma/` and `StructRisk/generated/magma*_*.{json,jsonl,csv,md}`: the MAGMA inventory audit inputs plus crash-backed MAGMA findings, ranked outputs, summaries, and project-level coverage tables.
 The package includes processed data and cached outputs rather than raw fuzzing
 campaigns or full third-party corpora.
@@ -40,9 +44,9 @@ campaigns or full third-party corpora.
 - The full third-party source mirror under `StructRisk/StructRisk_src_full/`.
 - Raw fuzzing campaigns and original third-party corpora.
 - The larger MAGMA rebuild-and-replay environments and the 1.9GB public PoC archives.
-- Any live API keys, model credentials, or author-identifying metadata.
+- Any live API keys or model credentials.
 
-This omission is intentional for compactness, licensing hygiene, and anonymous review. The shipped processed benchmark, ranked outputs, prompts/responses, CASR reports, and MAGMA evidence-card slices are sufficient to audit the reported results.
+These omissions keep the package compact and respect third-party licensing terms. The shipped processed benchmark, ranked outputs, prompts/responses, CASR reports, and MAGMA evidence-card slices are sufficient to audit the reported results.
 
 ## Requirements
 
@@ -53,7 +57,7 @@ Core reproduction uses only the Python standard library.
 
 Optional dependencies:
 
-- Docker is only relevant if you attempt to re-run replay-based CASR or MAGMA rebuild steps from original environments; it is not required for the shipped anonymous package quick check.
+- Docker is only relevant if you attempt to re-run replay-based CASR or MAGMA rebuild steps from original environments; it is not required for the shipped package quick check.
 
 ## Quick Start
 
@@ -68,13 +72,13 @@ This quick path writes only under `StructRisk/reproduced/quick/`; it does not ov
 - recomputes the global rankings from the shipped Eval findings (except cached CASR replay),
 - recomputes the within-project metrics and exact project-block p-values,
 - recomputes the ablation summary,
-- rebuilds LLM-CardScore from shipped anonymized responses and then deterministically derives LLM-LCR with source-site novelty for tied card scores,
+- rebuilds LLM-CardScore from shipped cached responses and then deterministically derives LLM-LCR with source-site novelty for tied card scores,
 - rebuilds the unified crash-backed MAGMA validation summary from shipped findings,
 - checks all regenerated values against Tables 3--6 of the submitted PDF.
 
 `run_quick_check.sh` defaults to a reviewer-friendly check and therefore uses the canonical global significance output while independently recomputing the faster within-project exact tests. Set `RUN_SIGNIFICANCE=1` for the full global permutation/bootstrap rerun.
 
-The shipped LLM-CardScore responses were generated with a fixed `gpt-5.4` configuration using the `xhigh` reasoning setting. The anonymous artifact supports deterministic replay from these cached responses rather than live regeneration against a future closed-model version.
+The shipped LLM-CardScore responses were generated with a fixed `gpt-5.4` configuration using the `xhigh` reasoning setting. The public artifact supports deterministic replay from these cached responses rather than live regeneration against a future closed-model version.
 
 To force a significance rerun from the shipped ranked outputs, use:
 
@@ -105,10 +109,10 @@ This script performs the following steps:
 
 1. Verifies the shipped canonical main-evaluation split by default; set `REBUILD_PHASE1_SPLIT=1` only if you want to regenerate exploratory split files from `phase1_artifact_index.jsonl`.
 2. Re-runs the public, artifact, support-count, crash-state, report-kNN, CASR, and StructRisk baselines.
-3. Re-runs the LLM baselines from shipped anonymized responses and the cached LCR base ranking.
+3. Re-runs the LLM baselines from shipped cached responses and the cached LCR base ranking.
 4. Recomputes ablations, within-project evaluation, and the crash-backed MAGMA validation outputs; shipped significance outputs are reused unless `RUN_SIGNIFICANCE=1` is set.
 
-The CASR replay baseline is skipped by default because the anonymous package does not bundle the full third-party source mirror. To force a CASR rerun in a local environment that has the required source tree and replay dependencies, set:
+The CASR replay baseline is skipped by default because the public package does not bundle the full third-party source mirror. To force a CASR rerun in a local environment that has the required source tree and replay dependencies, set:
 
 ```bash
 RUN_CASR=1 bash StructRisk/artifact_2026/run_full_offline.sh
@@ -208,7 +212,7 @@ The package is intended to support reviewer verification of the following paper 
 - Within-project ranking results and the associated macro metrics.
 - Bootstrap/permutation significance summary.
 - Fixed-scorer ablation study.
-- Leakage-controlled LLM evaluation using anonymous prompts, manifests, and shipped responses.
+- Leakage-controlled LLM evaluation using metadata-free prompts, manifests, and shipped responses.
 - Replay-based CASR comparator auditability through ranked outputs and released CASR reports.
 - MAGMA crash-backed validation and full-inventory MAGMA severity audit.
 

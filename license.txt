@@ -8,11 +8,11 @@ The StructRisk research artifact scripts are released under the MIT License.
 Derived benchmark records, cached outputs, and third-party data remain subject
 to their original licenses and usage terms.
 
-This anonymous review package is provided for 2026 artifact evaluation and
-paper-review reproducibility.
+This public package is provided for ACSAC 2026 artifact evaluation and
+research reproducibility.
 
 StructRisk scripts in artifact/StructRisk/scripts/ are research artifact code for
-review use. The package also includes derived benchmark records, ranked outputs,
+reproduction use. The package also includes derived benchmark records, ranked outputs,
 summary tables, cached LLM prompts/responses, and comparator logs used by the
 submitted paper.
 
@@ -21,6 +21,7 @@ campaigns, original third-party corpora, or public PoC archives. MAGMA-related
 files are processed inventory and crash-backed evidence-card slices used for the
 paper's external validation.
 
-CVE identifiers, NVD/CNA status, public severity fields, and public CNA/NVD
-contact emails are retained where needed to audit labels. Reporter-identifying
-provenance and direct issue/advisory URLs are redacted for double-blind review.
+CVE identifiers, NVD/CNA status, public severity fields, public CNA/NVD
+contact emails, and public issue/advisory links provide provenance for auditing
+labels. LLM inputs exclude identifying and outcome metadata to prevent
+evaluation leakage.

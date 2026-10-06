@@ -1,8 +1,9 @@
-StructRisk Anonymous Artifact
-=============================
+StructRisk Public Artifact
+==========================
 
-ACSAC 2026 Artifact Evaluation #14
-Paper submission #154
+Paper authors: GuanJi Yue, Xuan Yang, Shikun Zhang (Peking University)
+DOI: https://doi.org/10.5281/zenodo.23191951
+See README.md for the rendered DOI badge and public artifact overview.
 
 This package follows the required paper-artifact layout:
 
@@ -11,11 +12,11 @@ This package follows the required paper-artifact layout:
   claims/          Claim-specific reproduction scripts and expected outputs.
   install.sh       Lightweight environment check; no network access required.
   use.txt          Reviewer workflow and expected running time.
-  license.txt      License and third-party-data notes for anonymous review.
+  license.txt      License and third-party-data notes for public distribution.
   verify_paper_claims.sh  Non-destructive submitted-PDF result verifier.
   ARTIFACT_VERSION.txt   Maintenance version and submitted-PDF SHA-256.
 
-The artifact is designed for offline review. It does not require live LLM/API
+The artifact is designed for offline reproduction. It does not require live LLM/API
 calls, network access, or Docker for the quick checks. The included scripts use
 Python >= 3.10 and bash. The submitted package centers on the shipped processed
 benchmark, evidence-card slices, ranked outputs, cached LLM responses, and CASR
