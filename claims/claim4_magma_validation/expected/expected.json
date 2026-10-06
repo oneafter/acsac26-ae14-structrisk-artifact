@@ -1,0 +1,5 @@
+{
+  "slice": {"findings": 49, "projects": 9, "high_or_critical_positives": 31},
+  "StructRisk": {"HighRisk@10": 8, "NDCG@10": 0.8923},
+  "inventory": {"bug_records": 138, "distinct_cves": 125, "high_or_critical_cves": 84}
+}

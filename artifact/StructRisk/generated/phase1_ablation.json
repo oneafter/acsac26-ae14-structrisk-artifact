@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Full",
+    "weights": {
+      "replay": 2.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 2.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 8,
+      "NDCG@10": 0.8522,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.6,
+      "NDCG@5": 0.8561004227058827,
+      "MRR": 0.85,
+      "MAP": 0.8166666666666667,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-replay",
+    "weights": {
+      "replay": 0.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 2.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.8539,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.7624,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.55,
+      "NDCG@5": 0.8472741474924558,
+      "MRR": 0.8375,
+      "MAP": 0.8054166666666667,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-locality",
+    "weights": {
+      "replay": 2.0,
+      "locality": 0.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 2.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 8,
+      "NDCG@10": 0.8522,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.6,
+      "NDCG@5": 0.8561004227058827,
+      "MRR": 0.85,
+      "MAP": 0.8111111111111111,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-evidence_uniqueness_gated",
+    "weights": {
+      "replay": 2.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 0.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 2.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.7885,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.7333333333333333,
+      "HR@3": 1.65,
+      "NDCG@5": 0.855792110151738,
+      "MRR": 0.85,
+      "MAP": 0.8128968253968253,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-failure_semantics_gated",
+    "weights": {
+      "replay": 2.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 0.0,
+      "sanitizer": 2.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.791,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.6,
+      "NDCG@5": 0.8480725016207016,
+      "MRR": 0.85,
+      "MAP": 0.8,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-sanitizer",
+    "weights": {
+      "replay": 2.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 0.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.8539,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.7695,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.65,
+      "NDCG@5": 0.8779315071307288,
+      "MRR": 0.8375,
+      "MAP": 0.8220833333333333,
+      "projects": 10
+    }
+  },
+  {
+    "name": "-weak",
+    "weights": {
+      "replay": 2.0,
+      "locality": 1.0,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 2.0,
+      "weak": 0.0,
+      "bias": 0.0
+    },
+    "global": {
+      "HighRisk@5": 3,
+      "NDCG@5": 0.6992,
+      "HighRisk@10": 5,
+      "NDCG@10": 0.5965,
+      "Rank-to-First-HighRisk": 1
+    },
+    "within_project": {
+      "HR@1": 0.75,
+      "HR@3": 1.55,
+      "NDCG@5": 0.8472741474924558,
+      "MRR": 0.8375,
+      "MAP": 0.7998611111111111,
+      "projects": 10
+    }
+  }
+]

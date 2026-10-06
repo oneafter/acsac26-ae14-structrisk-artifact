@@ -1,0 +1,14 @@
+{
+  "mode": "frozen",
+  "provenance": "The three-tier structure and sign constraints are domain-informed, and the tier weights theta were set manually from domain experience. The signal-rule constants were calibrated by scripted search on the 5-project development split (its artifacts and labels). Every value was frozen before any of the 18 evaluation projects was scored; no evaluation data influenced any value. Deployment applies these weights and constants as a fixed rule.",
+  "weights": {
+    "replay": 2.0,
+    "locality": 1.0,
+    "evidence_uniqueness_gated": 1.0,
+    "failure_semantics_gated": 1.0,
+    "sanitizer": 2.0,
+    "weak": -3.0,
+    "bias": 0.0
+  },
+  "history": []
+}

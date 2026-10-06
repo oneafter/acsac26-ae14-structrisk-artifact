@@ -1,0 +1,83 @@
+{
+  "metrics": {
+    "HighRisk@5": 4,
+    "NDCG@5": 0.6608,
+    "HighRisk@10": 6,
+    "NDCG@10": 0.5619,
+    "Rank-to-First-HighRisk": 2,
+    "Effort-to-First-HighRisk": 16.06,
+    "Effort-per-HighRisk": 39.2
+  },
+  "project_summaries": [
+    {
+      "project": "binaryen",
+      "findings": 7,
+      "blocks": 5,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "lily",
+      "findings": 6,
+      "blocks": 5,
+      "reranked_blocks": 1,
+      "reranked_items": 2
+    },
+    {
+      "project": "openbabel",
+      "findings": 3,
+      "blocks": 2,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "raylib",
+      "findings": 13,
+      "blocks": 8,
+      "reranked_blocks": 2,
+      "reranked_items": 5
+    },
+    {
+      "project": "sokol",
+      "findings": 5,
+      "blocks": 4,
+      "reranked_blocks": 1,
+      "reranked_items": 2
+    },
+    {
+      "project": "soloud",
+      "findings": 12,
+      "blocks": 9,
+      "reranked_blocks": 1,
+      "reranked_items": 2
+    },
+    {
+      "project": "squirrel",
+      "findings": 10,
+      "blocks": 5,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "wabt",
+      "findings": 5,
+      "blocks": 3,
+      "reranked_blocks": 1,
+      "reranked_items": 3
+    },
+    {
+      "project": "wren",
+      "findings": 6,
+      "blocks": 5,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "xlnt",
+      "findings": 15,
+      "blocks": 5,
+      "reranked_blocks": 2,
+      "reranked_items": 9
+    }
+  ]
+}

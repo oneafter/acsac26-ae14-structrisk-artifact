@@ -1,0 +1,345 @@
+{
+  "method_order": [
+    "Public-Severity",
+    "ASan-Severity",
+    "Crash-State",
+    "LLM-CardScore",
+    "StructRisk+LLM-LCR"
+  ],
+  "comparisons": [
+    "StructRisk+LLM-LCR vs Public-Severity",
+    "StructRisk+LLM-LCR vs ASan-Severity",
+    "StructRisk+LLM-LCR vs Crash-State",
+    "StructRisk+LLM-LCR vs LLM-CardScore"
+  ],
+  "projects": [
+    "binaryen",
+    "lily",
+    "openbabel",
+    "raylib",
+    "sokol",
+    "soloud",
+    "squirrel",
+    "wabt",
+    "wren",
+    "xlnt"
+  ],
+  "bootstrap_rounds": 20000,
+  "point_metrics": {
+    "Public-Severity": {
+      "HR@1": 0.293003663003663,
+      "HR@3": 0.8790109890109891,
+      "NDCG@5": 0.5125804202210011,
+      "MRR": 0.5152667579734679,
+      "MAP": 0.4696177987122459
+    },
+    "ASan-Severity": {
+      "HR@1": 0.6066666666666667,
+      "HR@3": 1.42,
+      "NDCG@5": 0.7698602325706149,
+      "MRR": 0.750968253968254,
+      "MAP": 0.7197181337181336
+    },
+    "Crash-State": {
+      "HR@1": 0.65,
+      "HR@3": 1.55,
+      "NDCG@5": 0.8193038288345124,
+      "MRR": 0.8,
+      "MAP": 0.7569444444444444
+    },
+    "LLM-CardScore": {
+      "HR@1": 0.85,
+      "HR@3": 1.65,
+      "NDCG@5": 0.8848690954920719,
+      "MRR": 0.9083333333333334,
+      "MAP": 0.8444444444444444
+    },
+    "StructRisk+LLM-LCR": {
+      "HR@1": 0.9,
+      "HR@3": 1.7,
+      "NDCG@5": 0.9023230490017153,
+      "MRR": 0.9333333333333333,
+      "MAP": 0.875
+    }
+  },
+  "diff_summary": {
+    "StructRisk+LLM-LCR vs Public-Severity": {
+      "HR@1": {
+        "point": 0.606996336996337,
+        "ci95": [
+          0.36475824175824173,
+          0.786043956043956
+        ]
+      },
+      "HR@3": {
+        "point": 0.8209890109890109,
+        "ci95": [
+          0.4838461538461539,
+          1.157142857142857
+        ]
+      },
+      "NDCG@5": {
+        "point": 0.3897426287807142,
+        "ci95": [
+          0.23370785865851462,
+          0.5396559018221737
+        ]
+      },
+      "MRR": {
+        "point": 0.41806657535986547,
+        "ci95": [
+          0.2362157762872048,
+          0.5642488446297971
+        ]
+      },
+      "MAP": {
+        "point": 0.4053822012877541,
+        "ci95": [
+          0.24150345400651138,
+          0.5472118053056697
+        ]
+      }
+    },
+    "StructRisk+LLM-LCR vs ASan-Severity": {
+      "HR@1": {
+        "point": 0.29333333333333333,
+        "ci95": [
+          -0.07333333333333325,
+          0.62
+        ]
+      },
+      "HR@3": {
+        "point": 0.28,
+        "ci95": [
+          -0.033333333333333215,
+          0.6066666666666665
+        ]
+      },
+      "NDCG@5": {
+        "point": 0.13246281643110047,
+        "ci95": [
+          -0.018456929119133325,
+          0.27223262872763243
+        ]
+      },
+      "MRR": {
+        "point": 0.1823650793650794,
+        "ci95": [
+          -0.06349999999999989,
+          0.406063492063492
+        ]
+      },
+      "MAP": {
+        "point": 0.15528186628186635,
+        "ci95": [
+          -0.02488888888888874,
+          0.31795331589706577
+        ]
+      }
+    },
+    "StructRisk+LLM-LCR vs Crash-State": {
+      "HR@1": {
+        "point": 0.25,
+        "ci95": [
+          -0.1499999999999999,
+          0.6
+        ]
+      },
+      "HR@3": {
+        "point": 0.1499999999999999,
+        "ci95": [
+          0.0,
+          0.3500000000000001
+        ]
+      },
+      "NDCG@5": {
+        "point": 0.08301922016720298,
+        "ci95": [
+          -0.0370002838535395,
+          0.19669579997267905
+        ]
+      },
+      "MRR": {
+        "point": 0.1333333333333333,
+        "ci95": [
+          -0.09999999999999998,
+          0.35
+        ]
+      },
+      "MAP": {
+        "point": 0.11805555555555558,
+        "ci95": [
+          -0.03194444444444444,
+          0.2611111111111112
+        ]
+      }
+    },
+    "StructRisk+LLM-LCR vs LLM-CardScore": {
+      "HR@1": {
+        "point": 0.050000000000000044,
+        "ci95": [
+          0.0,
+          0.15000000000000002
+        ]
+      },
+      "HR@3": {
+        "point": 0.050000000000000044,
+        "ci95": [
+          0.0,
+          0.15000000000000013
+        ]
+      },
+      "NDCG@5": {
+        "point": 0.017453953509643405,
+        "ci95": [
+          -0.008027921085181244,
+          0.0509637491896493
+        ]
+      },
+      "MRR": {
+        "point": 0.02499999999999991,
+        "ci95": [
+          0.0,
+          0.07499999999999996
+        ]
+      },
+      "MAP": {
+        "point": 0.030555555555555558,
+        "ci95": [
+          -0.011111111111111183,
+          0.0805555555555556
+        ]
+      }
+    }
+  },
+  "permutation": {
+    "StructRisk+LLM-LCR vs Public-Severity": {
+      "HR@1": {
+        "observed_diff": 0.606996336996337,
+        "exact_two_sided_p": 0.004878048780487805,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "HR@3": {
+        "observed_diff": 0.8209890109890109,
+        "exact_two_sided_p": 0.00878048780487805,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "NDCG@5": {
+        "observed_diff": 0.3897426287807142,
+        "exact_two_sided_p": 0.004878048780487805,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MRR": {
+        "observed_diff": 0.41806657535986547,
+        "exact_two_sided_p": 0.006829268292682927,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MAP": {
+        "observed_diff": 0.4053822012877541,
+        "exact_two_sided_p": 0.006829268292682927,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      }
+    },
+    "StructRisk+LLM-LCR vs ASan-Severity": {
+      "HR@1": {
+        "observed_diff": 0.29333333333333333,
+        "exact_two_sided_p": 0.20390243902439023,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "HR@3": {
+        "observed_diff": 0.28,
+        "exact_two_sided_p": 0.18829268292682927,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "NDCG@5": {
+        "observed_diff": 0.13246281643110047,
+        "exact_two_sided_p": 0.12585365853658537,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MRR": {
+        "observed_diff": 0.1823650793650794,
+        "exact_two_sided_p": 0.18829268292682927,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MAP": {
+        "observed_diff": 0.15528186628186635,
+        "exact_two_sided_p": 0.14146341463414633,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      }
+    },
+    "StructRisk+LLM-LCR vs Crash-State": {
+      "HR@1": {
+        "observed_diff": 0.25,
+        "exact_two_sided_p": 0.375609756097561,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "HR@3": {
+        "observed_diff": 0.1499999999999999,
+        "exact_two_sided_p": 0.5004878048780488,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "NDCG@5": {
+        "observed_diff": 0.08301922016720298,
+        "exact_two_sided_p": 0.21951219512195122,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MRR": {
+        "observed_diff": 0.1333333333333333,
+        "exact_two_sided_p": 0.3131707317073171,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MAP": {
+        "observed_diff": 0.11805555555555558,
+        "exact_two_sided_p": 0.18829268292682927,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      }
+    },
+    "StructRisk+LLM-LCR vs LLM-CardScore": {
+      "HR@1": {
+        "observed_diff": 0.050000000000000044,
+        "exact_two_sided_p": 1.0,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "HR@3": {
+        "observed_diff": 0.050000000000000044,
+        "exact_two_sided_p": 1.0,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "NDCG@5": {
+        "observed_diff": 0.017453953509643405,
+        "exact_two_sided_p": 0.5004878048780488,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MRR": {
+        "observed_diff": 0.02499999999999991,
+        "exact_two_sided_p": 1.0,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      },
+      "MAP": {
+        "observed_diff": 0.030555555555555558,
+        "exact_two_sided_p": 0.375609756097561,
+        "num_project_blocks": 10,
+        "num_patterns": 1024
+      }
+    }
+  }
+}

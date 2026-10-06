@@ -1,0 +1,9 @@
+{
+  "HighRisk@5": 2,
+  "NDCG@5": 0.3008,
+  "HighRisk@10": 3,
+  "NDCG@10": 0.2614,
+  "Rank-to-First-HighRisk": 3,
+  "Effort-to-First-HighRisk": 26.4,
+  "Effort-per-HighRisk": 54.73
+}

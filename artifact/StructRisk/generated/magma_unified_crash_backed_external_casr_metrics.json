@@ -1,0 +1,95 @@
+{
+  "global": {
+    "HighRisk@5": 4,
+    "NDCG@5": 0.9031,
+    "HighRisk@10": 7,
+    "NDCG@10": 0.8588,
+    "HighRisk@20": 13,
+    "NDCG@20": 0.8127,
+    "Rank-to-First-HighRisk": 1
+  },
+  "within_project": {
+    "HR@1": 0.8571428571428571,
+    "HR@3": 2.2857142857142856,
+    "NDCG@5": 0.8996237644370124,
+    "MRR": 0.9285714285714286,
+    "MAP": 0.8672840651412079,
+    "projects": 7
+  },
+  "within_project_rows": [
+    {
+      "project": "libpng",
+      "findings": 4,
+      "positives": 1,
+      "HR@1": 1,
+      "HR@3": 1,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 1.0
+    },
+    {
+      "project": "libtiff",
+      "findings": 9,
+      "positives": 6,
+      "HR@1": 1,
+      "HR@3": 3,
+      "NDCG@5": 0.8415580415114009,
+      "MRR": 1.0,
+      "MAP": 0.8412698412698413
+    },
+    {
+      "project": "libxml2",
+      "findings": 6,
+      "positives": 5,
+      "HR@1": 1,
+      "HR@3": 2,
+      "NDCG@5": 0.8777221344374128,
+      "MRR": 1.0,
+      "MAP": 0.8099999999999999
+    },
+    {
+      "project": "openssl",
+      "findings": 5,
+      "positives": 4,
+      "HR@1": 1,
+      "HR@3": 3,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 1.0
+    },
+    {
+      "project": "php",
+      "findings": 3,
+      "positives": 3,
+      "HR@1": 1,
+      "HR@3": 3,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 1.0
+    },
+    {
+      "project": "poppler",
+      "findings": 12,
+      "positives": 5,
+      "HR@1": 0,
+      "HR@3": 1,
+      "NDCG@5": 0.5780861751102729,
+      "MRR": 0.5,
+      "MAP": 0.4375757575757576
+    },
+    {
+      "project": "sqlite3",
+      "findings": 8,
+      "positives": 7,
+      "HR@1": 1,
+      "HR@3": 3,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 0.9821428571428571
+    }
+  ],
+  "status_counts": {
+    "ok": 47,
+    "nonzero-1": 2
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "description": "Structure-preserving +/-20% perturbation of every hand-set signal-extraction constant, with theta fixed at the shipped prior. No variant is selected; this reports stability envelopes only.",
+  "theta": {
+    "replay": 2.0,
+    "locality": 1.0,
+    "evidence_uniqueness_gated": 1.0,
+    "failure_semantics_gated": 1.0,
+    "sanitizer": 2.0,
+    "weak": -3.0,
+    "bias": 0.0
+  },
+  "base_rule_scales": [
+    0.8,
+    1.2
+  ],
+  "derived_constants": {
+    "eu_support": 0.45,
+    "eu_site": 0.35,
+    "eu_spread": 0.2,
+    "fs_base": 0.2,
+    "fs_strong": 0.5,
+    "fs_deadly": 0.3,
+    "fs_site": 0.2,
+    "fs_exact": 0.1,
+    "fs_exit": 0.05,
+    "fs_assert": -0.1,
+    "fs_weakpat": -0.1,
+    "fs_san": 0.15,
+    "gate_slope": 1.2,
+    "gate_floor": 0.2,
+    "ss_bonus": 0.5,
+    "ss_min_count": 20.0,
+    "ss_weak_max": 0.1
+  },
+  "variant_count": 58,
+  "envelope": {
+    "global_NDCG@10": {
+      "base": 0.8522,
+      "min": 0.6988,
+      "max": 0.8572
+    },
+    "global_HR@10": {
+      "base": 8,
+      "min": 6,
+      "max": 8
+    },
+    "global_HR@5": {
+      "base": 5,
+      "min": 3,
+      "max": 5
+    },
+    "wp_NDCG@5": {
+      "base": 0.8561,
+      "min": 0.8473,
+      "max": 0.8622
+    },
+    "wp_MAP": {
+      "base": 0.8167,
+      "min": 0.8012,
+      "max": 0.825
+    }
+  },
+  "rows": [
+    {
+      "variant": "base",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_replay_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_replay_x120",
+      "global_NDCG@10": 0.7624,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8473,
+      "wp_MAP": 0.8054
+    },
+    {
+      "variant": "rule_locality_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_locality_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_sanitizer_x80",
+      "global_NDCG@10": 0.8572,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_sanitizer_x120",
+      "global_NDCG@10": 0.8482,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "rule_weak_x80",
+      "global_NDCG@10": 0.6988,
+      "global_HR@10": 6,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8093
+    },
+    {
+      "variant": "rule_weak_x120",
+      "global_NDCG@10": 0.7818,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "corner_LLLL",
+      "global_NDCG@10": 0.7722,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_LLLH",
+      "global_NDCG@10": 0.7885,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "corner_LLHL",
+      "global_NDCG@10": 0.7656,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8075
+    },
+    {
+      "variant": "corner_LLHH",
+      "global_NDCG@10": 0.7885,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "corner_LHLL",
+      "global_NDCG@10": 0.7722,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_LHLH",
+      "global_NDCG@10": 0.7885,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "corner_LHHL",
+      "global_NDCG@10": 0.7656,
+      "global_HR@10": 7,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_LHHH",
+      "global_NDCG@10": 0.7885,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "corner_HLLL",
+      "global_NDCG@10": 0.7538,
+      "global_HR@10": 7,
+      "global_HR@5": 3,
+      "wp_NDCG@5": 0.8473,
+      "wp_MAP": 0.8054
+    },
+    {
+      "variant": "corner_HLLH",
+      "global_NDCG@10": 0.782,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_HLHL",
+      "global_NDCG@10": 0.7506,
+      "global_HR@10": 7,
+      "global_HR@5": 3,
+      "wp_NDCG@5": 0.8473,
+      "wp_MAP": 0.8012
+    },
+    {
+      "variant": "corner_HLHH",
+      "global_NDCG@10": 0.782,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_HHLL",
+      "global_NDCG@10": 0.7538,
+      "global_HR@10": 7,
+      "global_HR@5": 3,
+      "wp_NDCG@5": 0.8473,
+      "wp_MAP": 0.8054
+    },
+    {
+      "variant": "corner_HHLH",
+      "global_NDCG@10": 0.782,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "corner_HHHL",
+      "global_NDCG@10": 0.7506,
+      "global_HR@10": 7,
+      "global_HR@5": 3,
+      "wp_NDCG@5": 0.8473,
+      "wp_MAP": 0.8054
+    },
+    {
+      "variant": "corner_HHHH",
+      "global_NDCG@10": 0.782,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "const_eu_support_x80",
+      "global_NDCG@10": 0.7846,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_eu_support_x120",
+      "global_NDCG@10": 0.839,
+      "global_HR@10": 8,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8509,
+      "wp_MAP": 0.8125
+    },
+    {
+      "variant": "const_eu_site_x80",
+      "global_NDCG@10": 0.8486,
+      "global_HR@10": 8,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "const_eu_site_x120",
+      "global_NDCG@10": 0.7885,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8117
+    },
+    {
+      "variant": "const_eu_spread_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_eu_spread_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_base_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_base_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_strong_x80",
+      "global_NDCG@10": 0.8572,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_strong_x120",
+      "global_NDCG@10": 0.7846,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_deadly_x80",
+      "global_NDCG@10": 0.7846,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_deadly_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_site_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_site_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_exact_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_exact_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_exit_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_exit_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_assert_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_assert_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_weakpat_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_weakpat_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_san_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_fs_san_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_gate_slope_x80",
+      "global_NDCG@10": 0.8486,
+      "global_HR@10": 8,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8622,
+      "wp_MAP": 0.825
+    },
+    {
+      "variant": "const_gate_slope_x120",
+      "global_NDCG@10": 0.6988,
+      "global_HR@10": 6,
+      "global_HR@5": 4,
+      "wp_NDCG@5": 0.8534,
+      "wp_MAP": 0.8093
+    },
+    {
+      "variant": "const_gate_floor_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_gate_floor_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_bonus_x80",
+      "global_NDCG@10": 0.7846,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_bonus_x120",
+      "global_NDCG@10": 0.8572,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_min_count_x80",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_min_count_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_weak_max_x80",
+      "global_NDCG@10": 0.7846,
+      "global_HR@10": 7,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    },
+    {
+      "variant": "const_ss_weak_max_x120",
+      "global_NDCG@10": 0.8522,
+      "global_HR@10": 8,
+      "global_HR@5": 5,
+      "wp_NDCG@5": 0.8561,
+      "wp_MAP": 0.8167
+    }
+  ]
+}

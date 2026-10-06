@@ -1,0 +1,30 @@
+{
+  "variant_count": 58,
+  "envelope": {
+    "global_NDCG@10": {
+      "base": 0.8522,
+      "min": 0.6988,
+      "max": 0.8572
+    },
+    "global_HR@10": {
+      "base": 8,
+      "min": 6,
+      "max": 8
+    },
+    "global_HR@5": {
+      "base": 5,
+      "min": 3,
+      "max": 5
+    },
+    "wp_NDCG@5": {
+      "base": 0.8561,
+      "min": 0.8473,
+      "max": 0.8622
+    },
+    "wp_MAP": {
+      "base": 0.8167,
+      "min": 0.8012,
+      "max": 0.825
+    }
+  }
+}

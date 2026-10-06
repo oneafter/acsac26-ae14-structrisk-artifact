@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bugs | magma</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Bugs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A ground-truth fuzzing benchmark suite based on real programs with real bugs." />
+<meta property="og:description" content="A ground-truth fuzzing benchmark suite based on real programs with real bugs." />
+<link rel="canonical" href="https://hexhive.epfl.ch/magma/docs/bugs.html" />
+<meta property="og:url" content="https://hexhive.epfl.ch/magma/docs/bugs.html" />
+<meta property="og:site_name" content="magma" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bugs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A ground-truth fuzzing benchmark suite based on real programs with real bugs.","headline":"Bugs","url":"https://hexhive.epfl.ch/magma/docs/bugs.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/magma/assets/ico/apple-touch-icon.png?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <link rel="icon" type="image/png" sizes="32x32" href="/magma/assets/ico/favicon-32x32.png?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <link rel="icon" type="image/png" sizes="16x16" href="/magma/assets/ico/favicon-16x16.png?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <link rel="manifest" href="/magma/assets/ico/site.webmanifest?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <link rel="mask-icon" href="/magma/assets/ico/safari-pinned-tab.svg?v=38ca5dc7fa455618b5b75cf264826315cccf35b4" color="#262626">
+    <link rel="shortcut icon" href="/magma/assets/ico/favicon.ico?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <meta name="apple-mobile-web-app-title" content="Magma">
+    <meta name="application-name" content="Magma">
+    <meta name="msapplication-TileColor" content="#f8f8f8">
+    <meta name="msapplication-config" content="/magma/assets/ico/browserconfig.xml?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <meta name="theme-color" content="#f8f8f8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/magma/assets/css/style.css?v=38ca5dc7fa455618b5b75cf264826315cccf35b4">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/magma/assets/js/report.js?v=38ca5dc7fa455618b5b75cf264826315cccf35b4"></script>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="fork-me">
+      <a href="https://github.com/HexHive/magma">
+      <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+      </a>
+    </div>
+    
+    <div class="wrapper">
+      <header>
+        <div class="logo-wrapper">
+          <a href="https://hexhive.epfl.ch/magma/"><img src="/magma/assets/svg/logo.svg" class="logo" /></a>
+        </div>
+        
+
+        <p>A ground-truth fuzzing benchmark suite based on real programs with real bugs.</p>
+
+        
+
+        
+
+        <div class="navigation">
+          <h2>Table of Contents</h2>
+          <ul class="browser-default">
+            
+            
+              
+              
+              <li><a class="other" href="/magma/">Home</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/getting-started.html">Getting Started</a></li>
+            
+              
+              
+              <li><a class="current" href="/magma/docs/bugs.html">Bugs</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/config.html">Configuration</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/technical.html">Technical Reference</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/faq.html">Frequently Asked Questions</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/troubleshoot.html">Troubleshoot</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/docs/contribute.html">Contribute</a></li>
+            
+              
+              
+              <li><a class="other" href="/magma/reports/">Reports</a></li>
+            
+          </ul>
+        </div>
+      </header>
+      <section>
+
+      
+<p>The following tables list the 138 bugs added to Magma, and their corresponding reports.</p>
+
+<p>Raw findings (from our paper) are also available.</p>
+
+<p>PoC dumps:</p>
+<ul class="browser-default">
+<li><a href="https://osf.io/resj8/">2020-10-27</a></li>
+<li><a href="https://drive.switch.ch/index.php/s/Uv1UrEA5ecg9NJk/download">2020-06-27</a></li>
+</ul>
+
+<p>Raw JSON (as generated by the <a href="https://github.com/HexHive/magma/blob/v1.2/tools/benchd/exp2json.py">exp2json</a> script):</p>
+<ul class="browser-default">
+<li><a href="/assets/json/data-24h.json" download="data-24h.json">24-hour campaigns</a></li>
+<li><a href="/assets/json/data-7d.json" download="data-7d.json">7-day campaigns</a></li>
+</ul>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/libpng">libpng</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">7</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG001.patch">PNG001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13785">CVE-2018-13785</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG002.patch">PNG002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7317">CVE-2019-7317</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG003.patch">PNG003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8472">CVE-2015-8472</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG004.patch">PNG004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0973">CVE-2015-0973</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG005.patch">PNG005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9495">CVE-2014-9495</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG006.patch">PNG006</a></td>
+
+<td><a target="_blank" href="">N/A</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libpng/patches/bugs/PNG007.patch">PNG007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6954">CVE-2013-6954</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/libtiff">LibTIFF</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">14</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF001.patch">TIF001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9535">CVE-2016-9535</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF002.patch">TIF002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5314">CVE-2016-5314</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF003.patch">TIF003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10266">CVE-2016-10266</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF004.patch">TIF004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10267">CVE-2016-10267</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF005.patch">TIF005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10269">CVE-2016-10269</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF006.patch">TIF006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10269">CVE-2016-10269</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF007.patch">TIF007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10270">CVE-2016-10270</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF008.patch">TIF008</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8784">CVE-2015-8784</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF009.patch">TIF009</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7663">CVE-2019-7663</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF010.patch">TIF010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8905">CVE-2018-8905</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF011.patch">TIF011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7456">CVE-2018-7456</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF012.patch">TIF012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3658">CVE-2016-3658</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF013.patch">TIF013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18557">CVE-2018-18557</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libtiff/patches/bugs/TIF014.patch">TIF014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11613">CVE-2017-11613</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/libxml2">Libxml2</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">17</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML001.patch">XML001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9047">CVE-2017-9047</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML002.patch">XML002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0663">CVE-2017-0663</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML003.patch">XML003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7375">CVE-2017-7375</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML004.patch">XML004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14567">CVE-2018-14567</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML005.patch">XML005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5130">CVE-2017-5130</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML006.patch">XML006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9048">CVE-2017-9048</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML007.patch">XML007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8872">CVE-2017-8872</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML008.patch">XML008</a></td>
+
+<td><a target="_blank" href="https://gitlab.gnome.org/GNOME/libxml2/-/issues/58">Issue #58</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML009.patch">XML009</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8317">CVE-2015-8317</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML010.patch">XML010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4449">CVE-2016-4449</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML011.patch">XML011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1834">CVE-2016-1834</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML012.patch">XML012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1836">CVE-2016-1836</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML013.patch">XML013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1837">CVE-2016-1837</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML014.patch">XML014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1839">CVE-2016-1839</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML015.patch">XML015</a></td>
+
+<td><a target="_blank" href="">Bug #758518</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML016.patch">XML016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1840">CVE-2016-1840</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libxml2/patches/bugs/XML017.patch">XML017</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1762">CVE-2016-1762</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/poppler">Poppler</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">22</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF001.patch">PDF001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14494">CVE-2019-14494</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF002.patch">PDF002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9959">CVE-2019-9959</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF003.patch">PDF003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9865">CVE-2017-9865</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF004.patch">PDF004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10873">CVE-2019-10873</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF005.patch">PDF005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12293">CVE-2019-12293</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF006.patch">PDF006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10872">CVE-2019-10872</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF007.patch">PDF007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9200">CVE-2019-9200</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF008.patch">PDF008</a></td>
+
+<td><a target="_blank" href="https://bugs.freedesktop.org/show_bug.cgi?id=106061">Bug #106061</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF009.patch">PDF009</a></td>
+
+<td><a target="_blank" href="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=8499">ossfuzz/8499</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF010.patch">PDF010</a></td>
+
+<td><a target="_blank" href="https://bugs.freedesktop.org/show_bug.cgi?id=101366">Bug #101366</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF011.patch">PDF011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7310">CVE-2019-7310</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF012.patch">PDF012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-21009">CVE-2018-21009</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF013.patch">PDF013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20650">CVE-2018-20650</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF014.patch">PDF014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20481">CVE-2018-20481</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF015.patch">PDF015</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19058">CVE-2018-19058</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF016.patch">PDF016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13988">CVE-2018-13988</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF017.patch">PDF017</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12360">CVE-2019-12360</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF018.patch">PDF018</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10768">CVE-2018-10768</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF019.patch">PDF019</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9776">CVE-2017-9776</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF020.patch">PDF020</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18267">CVE-2017-18267</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF021.patch">PDF021</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14617">CVE-2017-14617</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/poppler/patches/bugs/PDF022.patch">PDF022</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12493">CVE-2019-12493</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/openssl">OpenSSL</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">20</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL001.patch">SSL001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2108">CVE-2016-2108</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL002.patch">SSL002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6309">CVE-2016-6309</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL003.patch">SSL003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2109">CVE-2016-2109</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL004.patch">SSL004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2176">CVE-2016-2176</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL005.patch">SSL005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6304">CVE-2016-6304</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL006.patch">SSL006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2105">CVE-2016-2105</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL007.patch">SSL007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6303">CVE-2016-6303</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL008.patch">SSL008</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-3730">CVE-2017-3730</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL009.patch">SSL009</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-3735">CVE-2017-3735</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL010.patch">SSL010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0797">CVE-2016-0797</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL011.patch">SSL011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1790">CVE-2015-1790</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL012.patch">SSL012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0288">CVE-2015-0288</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL013.patch">SSL013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0208">CVE-2015-0208</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL014.patch">SSL014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0286">CVE-2015-0286</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL015.patch">SSL015</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0289">CVE-2015-0289</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL016.patch">SSL016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1788">CVE-2015-1788</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL017.patch">SSL017</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-7052">CVE-2016-7052</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL018.patch">SSL018</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6308">CVE-2016-6308</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL019.patch">SSL019</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6305">CVE-2016-6305</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/openssl/patches/bugs/SSL020.patch">SSL020</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6302">CVE-2016-6302</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/sqlite3">SQLite</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">20</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL001.patch">SQL001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9936">CVE-2019-9936</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL002.patch">SQL002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20218">CVE-2019-20218</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL003.patch">SQL003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19923">CVE-2019-19923</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL004.patch">SQL004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19959">CVE-2019-19959</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL005.patch">SQL005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19925">CVE-2019-19925</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL006.patch">SQL006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19244">CVE-2019-19244</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL007.patch">SQL007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8740">CVE-2018-8740</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL008.patch">SQL008</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15286">CVE-2017-15286</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL009.patch">SQL009</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-2520">CVE-2017-2520</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL010.patch">SQL010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-2518">CVE-2017-2518</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL011.patch">SQL011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10989">CVE-2017-10989</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL012.patch">SQL012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19646">CVE-2019-19646</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL013.patch">SQL013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7443">CVE-2013-7443</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL014.patch">SQL014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19926">CVE-2019-19926</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL015.patch">SQL015</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19317">CVE-2019-19317</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL016.patch">SQL016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3415">CVE-2015-3415</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL017.patch">SQL017</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9327">CVE-2020-9327</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL018.patch">SQL018</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3414">CVE-2015-3414</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL019.patch">SQL019</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3416">CVE-2015-3416</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/sqlite3/patches/bugs/SQL020.patch">SQL020</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19880">CVE-2019-19880</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/php">PHP</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">16</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP001.patch">PHP001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9021">CVE-2019-9021</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP002.patch">PHP002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9641">CVE-2019-9641</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP003.patch">PHP003</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11041">CVE-2019-11041</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP004.patch">PHP004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11034">CVE-2019-11034</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP005.patch">PHP005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11039">CVE-2019-11039</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP006.patch">PHP006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11040">CVE-2019-11040</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP007.patch">PHP007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20783">CVE-2018-20783</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP008.patch">PHP008</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9022">CVE-2019-9022</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP009.patch">PHP009</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9638">CVE-2019-9638</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP010.patch">PHP010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9640">CVE-2019-9640</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP011.patch">PHP011</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14883">CVE-2018-14883</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP012.patch">PHP012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7584">CVE-2018-7584</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP013.patch">PHP013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11362">CVE-2017-11362</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP014.patch">PHP014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9912">CVE-2014-9912</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP015.patch">PHP015</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10159">CVE-2016-10159</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/php/patches/bugs/PHP016.patch">PHP016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-7414">CVE-2016-7414</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/lua">Lua</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">4</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/lua/patches/bugs/LUA001.patch">LUA001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24370">CVE-2020-24370</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/lua/patches/bugs/LUA002.patch">LUA002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24369">CVE-2020-24369</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/lua/patches/bugs/LUA003.patch">LUA003</a></td>
+
+<td><a target="_blank" href="https://github.com/lua/lua/commit/1ecfbfa">Commit 1ecfbfa</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/lua/patches/bugs/LUA004.patch">LUA004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15945">CVE-2020-15945</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>
+
+<div class="row valign-wrapper">
+<div class="col s6">
+<h2><a href="https://github.com/HexHive/magma/tree/master/targets/libsndfile">libsndfile</a></h2>
+</div>
+<div class="col s6">
+<span class="badge new right" data-badge-caption="bugs">18</span>
+</div>
+</div>
+
+<div class="bugs">
+<table class="highlight">
+<thead>
+<tr>
+<th>Bug</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND001.patch">SND001</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2696">CVE-2011-2696</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND002.patch">SND002</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9496">CVE-2014-9496</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND004.patch">SND004</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9756">CVE-2014-9756</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND005.patch">SND005</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6892">CVE-2017-6892</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND006.patch">SND006</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8361">CVE-2017-8361</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND007.patch">SND007</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8363">CVE-2017-8363</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND010.patch">SND010</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12562">CVE-2017-12562</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND012.patch">SND012</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12562">CVE-2017-12562</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND013.patch">SND013</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12562">CVE-2017-12562</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND014.patch">SND014</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14245">CVE-2017-14245</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND015.patch">SND015</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19662">CVE-2018-19662</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND016.patch">SND016</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14634">CVE-2017-14634</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND017.patch">SND017</a></td>
+
+<td><a target="_blank" href="https://github.com/libsndfile/libsndfile/commit/a8ab5b3">Commit a8ab5b3</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND020.patch">SND020</a></td>
+
+<td><a target="_blank" href="https://github.com/libsndfile/libsndfile/commit/a8ab5b3">Commit a8ab5b3</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND022.patch">SND022</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14246">CVE-2017-14246</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND023.patch">SND023</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19661">CVE-2018-19661</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND024.patch">SND024</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8363">CVE-2017-8363</a></td>
+
+</tr>
+
+<tr>
+<td><a target="_blank" href="https://github.com/HexHive/magma/tree/master/targets/libsndfile/patches/bugs/SND025.patch">SND025</a></td>
+
+<td><a target="_blank" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19758">CVE-2018-19758</a></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+      </section>
+      <footer>
+        
+        <p class="owner">This project is maintained by <a href="https://github.com/HexHive"><img src="/magma/assets/svg/HexHive-logo.svg" class="hexhive-logo"/></a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/magma/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>

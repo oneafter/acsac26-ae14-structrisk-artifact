@@ -1,0 +1,540 @@
+{
+  "full_inventory": {
+    "bug_records": 138,
+    "distinct_cves": 125,
+    "severity_counts": {
+      "CRITICAL": 21,
+      "HIGH": 63,
+      "LOW": 1,
+      "MEDIUM": 40
+    },
+    "high_or_critical_cves": 84,
+    "projects": 9
+  },
+  "projects": [
+    {
+      "project": "libpng",
+      "bug_records": 7,
+      "distinct_cves": 6,
+      "high_or_critical_cves": 3
+    },
+    {
+      "project": "libsndfile",
+      "bug_records": 18,
+      "distinct_cves": 13,
+      "high_or_critical_cves": 6
+    },
+    {
+      "project": "libtiff",
+      "bug_records": 14,
+      "distinct_cves": 13,
+      "high_or_critical_cves": 7
+    },
+    {
+      "project": "libxml2",
+      "bug_records": 17,
+      "distinct_cves": 15,
+      "high_or_critical_cves": 10
+    },
+    {
+      "project": "lua",
+      "bug_records": 4,
+      "distinct_cves": 3,
+      "high_or_critical_cves": 1
+    },
+    {
+      "project": "openssl",
+      "bug_records": 20,
+      "distinct_cves": 20,
+      "high_or_critical_cves": 12
+    },
+    {
+      "project": "php",
+      "bug_records": 16,
+      "distinct_cves": 16,
+      "high_or_critical_cves": 16
+    },
+    {
+      "project": "poppler",
+      "bug_records": 22,
+      "distinct_cves": 19,
+      "high_or_critical_cves": 10
+    },
+    {
+      "project": "sqlite3",
+      "bug_records": 20,
+      "distinct_cves": 20,
+      "high_or_critical_cves": 19
+    }
+  ],
+  "unified_crash_backed": {
+    "input_artifacts": 1190,
+    "deduplicated_artifacts": 1154,
+    "duplicates_removed": 36,
+    "findings": 49,
+    "projects": 9,
+    "high_findings": 31,
+    "distinct_bug_ids": 48,
+    "distinct_cves": 43
+  },
+  "unified_coverage": {
+    "findings": 49,
+    "covered_bug_ids": 48,
+    "covered_cves": 43,
+    "covered_high_or_critical_cves": 29,
+    "project_rows": [
+      {
+        "project": "libpng",
+        "inventory_bug_records": 7,
+        "inventory_distinct_cves": 6,
+        "inventory_high_or_critical_cves": 3,
+        "unified_findings": 4,
+        "unified_high_or_critical_positives": 1,
+        "unified_distinct_bug_ids": 4,
+        "unified_distinct_cves": 3,
+        "unified_high_or_critical_cves": 1,
+        "cve_coverage_pct": 50.0,
+        "high_or_critical_cve_coverage_pct": 33.3
+      },
+      {
+        "project": "libsndfile",
+        "inventory_bug_records": 18,
+        "inventory_distinct_cves": 13,
+        "inventory_high_or_critical_cves": 6,
+        "unified_findings": 1,
+        "unified_high_or_critical_positives": 0,
+        "unified_distinct_bug_ids": 1,
+        "unified_distinct_cves": 0,
+        "unified_high_or_critical_cves": 0,
+        "cve_coverage_pct": 0.0,
+        "high_or_critical_cve_coverage_pct": 0.0
+      },
+      {
+        "project": "libtiff",
+        "inventory_bug_records": 14,
+        "inventory_distinct_cves": 13,
+        "inventory_high_or_critical_cves": 7,
+        "unified_findings": 9,
+        "unified_high_or_critical_positives": 6,
+        "unified_distinct_bug_ids": 9,
+        "unified_distinct_cves": 8,
+        "unified_high_or_critical_cves": 5,
+        "cve_coverage_pct": 61.5,
+        "high_or_critical_cve_coverage_pct": 71.4
+      },
+      {
+        "project": "libxml2",
+        "inventory_bug_records": 17,
+        "inventory_distinct_cves": 15,
+        "inventory_high_or_critical_cves": 10,
+        "unified_findings": 6,
+        "unified_high_or_critical_positives": 5,
+        "unified_distinct_bug_ids": 6,
+        "unified_distinct_cves": 6,
+        "unified_high_or_critical_cves": 5,
+        "cve_coverage_pct": 40.0,
+        "high_or_critical_cve_coverage_pct": 50.0
+      },
+      {
+        "project": "lua",
+        "inventory_bug_records": 4,
+        "inventory_distinct_cves": 3,
+        "inventory_high_or_critical_cves": 1,
+        "unified_findings": 1,
+        "unified_high_or_critical_positives": 0,
+        "unified_distinct_bug_ids": 1,
+        "unified_distinct_cves": 1,
+        "unified_high_or_critical_cves": 0,
+        "cve_coverage_pct": 33.3,
+        "high_or_critical_cve_coverage_pct": 0.0
+      },
+      {
+        "project": "openssl",
+        "inventory_bug_records": 20,
+        "inventory_distinct_cves": 20,
+        "inventory_high_or_critical_cves": 12,
+        "unified_findings": 5,
+        "unified_high_or_critical_positives": 4,
+        "unified_distinct_bug_ids": 4,
+        "unified_distinct_cves": 4,
+        "unified_high_or_critical_cves": 3,
+        "cve_coverage_pct": 20.0,
+        "high_or_critical_cve_coverage_pct": 25.0
+      },
+      {
+        "project": "php",
+        "inventory_bug_records": 16,
+        "inventory_distinct_cves": 16,
+        "inventory_high_or_critical_cves": 16,
+        "unified_findings": 3,
+        "unified_high_or_critical_positives": 3,
+        "unified_distinct_bug_ids": 3,
+        "unified_distinct_cves": 3,
+        "unified_high_or_critical_cves": 3,
+        "cve_coverage_pct": 18.8,
+        "high_or_critical_cve_coverage_pct": 18.8
+      },
+      {
+        "project": "poppler",
+        "inventory_bug_records": 22,
+        "inventory_distinct_cves": 19,
+        "inventory_high_or_critical_cves": 10,
+        "unified_findings": 12,
+        "unified_high_or_critical_positives": 5,
+        "unified_distinct_bug_ids": 12,
+        "unified_distinct_cves": 10,
+        "unified_high_or_critical_cves": 5,
+        "cve_coverage_pct": 52.6,
+        "high_or_critical_cve_coverage_pct": 50.0
+      },
+      {
+        "project": "sqlite3",
+        "inventory_bug_records": 20,
+        "inventory_distinct_cves": 20,
+        "inventory_high_or_critical_cves": 19,
+        "unified_findings": 8,
+        "unified_high_or_critical_positives": 7,
+        "unified_distinct_bug_ids": 8,
+        "unified_distinct_cves": 8,
+        "unified_high_or_critical_cves": 7,
+        "cve_coverage_pct": 40.0,
+        "high_or_critical_cve_coverage_pct": 36.8
+      }
+    ]
+  },
+  "unified_crash_backed_rank": [
+    {
+      "method": "Oracle-CVSS",
+      "hr10": 10,
+      "ndcg10": 1.0,
+      "wp_ndcg5": 1.0,
+      "wp_map": 1.0
+    },
+    {
+      "method": "Support-Count",
+      "hr10": 7,
+      "ndcg10": 0.8588,
+      "wp_ndcg5": 0.8996237644370124,
+      "wp_map": 0.8672840651412079
+    },
+    {
+      "method": "Artifact-Completeness",
+      "hr10": 7,
+      "ndcg10": 0.8301,
+      "wp_ndcg5": 0.8803404402463793,
+      "wp_map": 0.8006173984745413
+    },
+    {
+      "method": "ASan-Severity",
+      "hr10": 4,
+      "ndcg10": 0.5131,
+      "wp_ndcg5": 0.8739059088754616,
+      "wp_map": 0.787454648526077
+    },
+    {
+      "method": "Crash-State",
+      "hr10": 7,
+      "ndcg10": 0.796,
+      "wp_ndcg5": 0.8793311097528014,
+      "wp_map": 0.7958554937126365
+    },
+    {
+      "method": "StackDedup-kNN",
+      "hr10": 4,
+      "ndcg10": 0.5131,
+      "wp_ndcg5": 0.8739059088754616,
+      "wp_map": 0.787454648526077
+    },
+    {
+      "method": "StructRisk",
+      "hr10": 8,
+      "ndcg10": 0.8923,
+      "wp_ndcg5": 0.9035846827046504,
+      "wp_map": 0.8713832199546484
+    },
+    {
+      "method": "CASR-Severity",
+      "hr10": 7,
+      "ndcg10": 0.8588,
+      "wp_ndcg5": 0.8996237644370124,
+      "wp_map": 0.8672840651412079
+    }
+  ],
+  "strict_crash_backed": {
+    "raw_artifacts": 1070,
+    "findings": 23,
+    "projects": 9,
+    "high_findings": 12
+  },
+  "strict_crash_backed_rank": [
+    {
+      "method": "Oracle-CVSS",
+      "hr10": 10,
+      "ndcg10": 1.0,
+      "wp_ndcg5": 1.0,
+      "wp_map": 1.0
+    },
+    {
+      "method": "Support-Count",
+      "hr10": 7,
+      "ndcg10": 0.8588,
+      "wp_ndcg5": 1.0,
+      "wp_map": 1.0
+    },
+    {
+      "method": "Artifact-Completeness",
+      "hr10": 7,
+      "ndcg10": 0.8301,
+      "wp_ndcg5": 0.9644878543026308,
+      "wp_map": 0.875
+    },
+    {
+      "method": "ASan-Severity",
+      "hr10": 4,
+      "ndcg10": 0.5098,
+      "wp_ndcg5": 0.9307680238191708,
+      "wp_map": 0.8125
+    },
+    {
+      "method": "Crash-State",
+      "hr10": 7,
+      "ndcg10": 0.796,
+      "wp_ndcg5": 0.9644878543026308,
+      "wp_map": 0.875
+    },
+    {
+      "method": "StackDedup-kNN",
+      "hr10": 4,
+      "ndcg10": 0.5098,
+      "wp_ndcg5": 0.9307680238191708,
+      "wp_map": 0.8125
+    },
+    {
+      "method": "StructRisk",
+      "hr10": 8,
+      "ndcg10": 0.8923,
+      "wp_ndcg5": 0.9949972447106676,
+      "wp_map": 1.0
+    }
+  ],
+  "poc_package_coverage": {
+    "archive_files": 292357,
+    "matched_poc_files": 286644,
+    "distinct_bug_ids": 49,
+    "projects": {
+      "poppler": 55101,
+      "libxml2": 180694,
+      "libtiff": 23855,
+      "sqlite3": 12694,
+      "libpng": 3987,
+      "php": 6570,
+      "openssl": 3743
+    },
+    "targets": {
+      "poppler/pdfimages": 21770,
+      "libxml2/xmllint": 124759,
+      "libtiff/tiff_read_rgba_fuzzer": 10328,
+      "poppler/pdf_fuzzer": 15466,
+      "sqlite3/sqlite3_fuzz": 12694,
+      "libpng/libpng_read_fuzzer": 3987,
+      "php/exif": 6570,
+      "libtiff/tiffcp": 13527,
+      "libxml2/libxml2_xml_read_memory_fuzzer": 55935,
+      "poppler/pdftoppm": 17865,
+      "openssl/client": 1038,
+      "openssl/x509": 1540,
+      "openssl/asn1": 604,
+      "openssl/server": 561
+    },
+    "legacy_inventory_ids": 120,
+    "legacy_covered": 49,
+    "legacy_missing": 71,
+    "legacy_cves": 45,
+    "legacy_high_bug_ids": 31,
+    "html_inventory_ids": 138,
+    "html_covered": 0,
+    "html_missing": 138,
+    "covered_legacy_ids": [
+      "AAH001",
+      "AAH003",
+      "AAH007",
+      "AAH008",
+      "AAH009",
+      "AAH010",
+      "AAH013",
+      "AAH014",
+      "AAH015",
+      "AAH016",
+      "AAH017",
+      "AAH020",
+      "AAH022",
+      "AAH024",
+      "AAH025",
+      "AAH026",
+      "AAH029",
+      "AAH032",
+      "AAH035",
+      "AAH037",
+      "AAH041",
+      "AAH042",
+      "AAH043",
+      "AAH045",
+      "AAH046",
+      "AAH048",
+      "AAH049",
+      "AAH050",
+      "AAH052",
+      "AAH055",
+      "AAH056",
+      "JCH201",
+      "JCH207",
+      "JCH209",
+      "JCH210",
+      "JCH212",
+      "JCH215",
+      "JCH216",
+      "JCH223",
+      "JCH226",
+      "JCH227",
+      "JCH228",
+      "JCH229",
+      "JCH232",
+      "MAE008",
+      "MAE014",
+      "MAE016",
+      "MAE104",
+      "MAE115"
+    ],
+    "missing_legacy_ids": [
+      "AAH002",
+      "AAH004",
+      "AAH005",
+      "AAH011",
+      "AAH012",
+      "AAH018",
+      "AAH019",
+      "AAH021",
+      "AAH027",
+      "AAH028",
+      "AAH030",
+      "AAH031",
+      "AAH033",
+      "AAH034",
+      "AAH036",
+      "AAH038",
+      "AAH039",
+      "AAH040",
+      "AAH047",
+      "AAH051",
+      "AAH053",
+      "AAH054",
+      "AAH057",
+      "AAH058",
+      "AAH059",
+      "JCH202",
+      "JCH203",
+      "JCH204",
+      "JCH206",
+      "JCH208",
+      "JCH211",
+      "JCH214",
+      "JCH217",
+      "JCH218",
+      "JCH219",
+      "JCH220",
+      "JCH221",
+      "JCH222",
+      "JCH225",
+      "JCH230",
+      "JCH231",
+      "JCH233",
+      "JCH234",
+      "MAE001",
+      "MAE002",
+      "MAE004",
+      "MAE006",
+      "MAE009",
+      "MAE010",
+      "MAE011",
+      "MAE012",
+      "MAE013",
+      "MAE015",
+      "MAE017",
+      "MAE018",
+      "MAE019",
+      "MAE020",
+      "MAE021",
+      "MAE100",
+      "MAE102",
+      "MAE103",
+      "MAE105",
+      "MAE106",
+      "MAE107",
+      "MAE108",
+      "MAE109",
+      "MAE110",
+      "MAE111",
+      "MAE112",
+      "MAE113",
+      "MAE114"
+    ],
+    "covered_html_ids": []
+  },
+  "broader_public_poc_crash_backed": {
+    "raw_artifacts": 120,
+    "findings": 46,
+    "projects": 7,
+    "high_findings": 30
+  },
+  "broader_public_poc_crash_backed_rank": [
+    {
+      "method": "Oracle-CVSS",
+      "hr10": 10,
+      "ndcg10": 1.0,
+      "wp_ndcg5": 1.0,
+      "wp_map": 1.0
+    },
+    {
+      "method": "Support-Count",
+      "hr10": 5,
+      "ndcg10": 0.5909,
+      "wp_ndcg5": 0.8428464626616063,
+      "wp_map": 0.7225602232234885
+    },
+    {
+      "method": "Artifact-Completeness",
+      "hr10": 4,
+      "ndcg10": 0.6625,
+      "wp_ndcg5": 0.8530649243462103,
+      "wp_map": 0.732084032747298
+    },
+    {
+      "method": "ASan-Severity",
+      "hr10": 4,
+      "ndcg10": 0.5586,
+      "wp_ndcg5": 0.8739059088754616,
+      "wp_map": 0.787454648526077
+    },
+    {
+      "method": "Crash-State",
+      "hr10": 5,
+      "ndcg10": 0.5909,
+      "wp_ndcg5": 0.8428464626616063,
+      "wp_map": 0.7225602232234885
+    },
+    {
+      "method": "StackDedup-kNN",
+      "hr10": 4,
+      "ndcg10": 0.5586,
+      "wp_ndcg5": 0.8739059088754616,
+      "wp_map": 0.787454648526077
+    },
+    {
+      "method": "StructRisk",
+      "hr10": 5,
+      "ndcg10": 0.7343,
+      "wp_ndcg5": 0.8426835690135244,
+      "wp_map": 0.7291820537738906
+    }
+  ]
+}

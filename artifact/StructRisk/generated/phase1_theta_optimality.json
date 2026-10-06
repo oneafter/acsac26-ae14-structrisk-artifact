@@ -1,0 +1,91 @@
+{
+  "paper": {
+    "dev_wp_ndcg5": 0.814128343791064,
+    "dev_wp_map": 0.7916666666666666,
+    "eval_g_ndcg10": 0.8521705090845475,
+    "eval_wp_ndcg5": 0.8980725016207016,
+    "eval_wp_map": 0.8416666666666666,
+    "combined_wp_ndcg5": 0.8561004227058827,
+    "combined_wp_map": 0.8166666666666667
+  },
+  "dev_optimal": {
+    "theta": {
+      "replay": 0.5,
+      "locality": 0.5,
+      "evidence_uniqueness_gated": 1.5,
+      "failure_semantics_gated": 0.5,
+      "sanitizer": 0.5,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "metrics": {
+      "dev_wp_ndcg5": 0.9061004227058828,
+      "dev_wp_map": 0.8666666666666666,
+      "eval_g_ndcg10": 0.6969383549984332,
+      "eval_wp_ndcg5": 0.826042820278645,
+      "eval_wp_map": 0.8058333333333334,
+      "combined_wp_ndcg5": 0.8660716214922639,
+      "combined_wp_map": 0.83625
+    }
+  },
+  "eval_global_optimal": {
+    "theta": {
+      "replay": 0.5,
+      "locality": 0.5,
+      "evidence_uniqueness_gated": 1.0,
+      "failure_semantics_gated": 3.0,
+      "sanitizer": 0.5,
+      "weak": -4.0,
+      "bias": 0.0
+    },
+    "metrics": {
+      "dev_wp_ndcg5": 0.814128343791064,
+      "dev_wp_map": 0.7916666666666666,
+      "eval_g_ndcg10": 0.8603818544462509,
+      "eval_wp_ndcg5": 0.9103509700868966,
+      "eval_wp_map": 0.8583333333333332,
+      "combined_wp_ndcg5": 0.8622396569389803,
+      "combined_wp_map": 0.825
+    }
+  },
+  "eval_wp_optimal": {
+    "theta": {
+      "replay": 0.5,
+      "locality": 0.5,
+      "evidence_uniqueness_gated": 0.5,
+      "failure_semantics_gated": 0.5,
+      "sanitizer": 1.0,
+      "weak": -3.0,
+      "bias": 0.0
+    },
+    "metrics": {
+      "dev_wp_ndcg5": 0.814128343791064,
+      "dev_wp_map": 0.7916666666666666,
+      "eval_g_ndcg10": 0.8553475075669357,
+      "eval_wp_ndcg5": 0.9103509700868966,
+      "eval_wp_map": 0.8583333333333332,
+      "combined_wp_ndcg5": 0.8622396569389803,
+      "combined_wp_map": 0.825
+    }
+  },
+  "combined_wp_optimal": {
+    "theta": {
+      "replay": 0.5,
+      "locality": 0.5,
+      "evidence_uniqueness_gated": 0.5,
+      "failure_semantics_gated": 1.0,
+      "sanitizer": 0.5,
+      "weak": -4.0,
+      "bias": 0.0
+    },
+    "metrics": {
+      "dev_wp_ndcg5": 0.8669419683055821,
+      "dev_wp_map": 0.8083333333333333,
+      "eval_g_ndcg10": 0.8553475075669357,
+      "eval_wp_ndcg5": 0.9103509700868966,
+      "eval_wp_map": 0.8583333333333332,
+      "combined_wp_ndcg5": 0.8886464691962394,
+      "combined_wp_map": 0.8333333333333334
+    }
+  }
+}

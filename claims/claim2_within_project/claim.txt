@@ -1,0 +1,14 @@
+Claim 2: Within-project ranking and LLM-LCR
+===========================================
+
+Within-project ranking is the paper's primary supported result. On ten positive
+multi-finding projects, StructRisk+LLM-LCR reaches NDCG@5/MAP = 0.9023/0.8750
+versus 0.5126/0.4696 for Public-Severity. The difference is significant against
+Public-Severity (p = 0.0049 for NDCG@5 and p = 0.0068 for MAP). LLM-LCR changes
+only a small number of same-project score blocks.
+
+Canonical outputs:
+
+  artifact/StructRisk/generated/phase1_within_project_metrics.json
+  artifact/StructRisk/generated/phase1_within_project_significance.json
+  artifact/StructRisk/generated/phase1_within10_llm_lcr_summary.md

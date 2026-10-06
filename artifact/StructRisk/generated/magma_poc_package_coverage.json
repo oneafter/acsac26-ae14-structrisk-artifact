@@ -1,0 +1,771 @@
+{
+  "missing_packages": [],
+  "packages": {
+    "poc_afl.tar.gz": {
+      "files": 21089,
+      "matched": 20752,
+      "unmatched": 337,
+      "bug_ids": 26,
+      "projects": {
+        "poppler": 6372,
+        "libxml2": 8751,
+        "libtiff": 3164,
+        "sqlite3": 286,
+        "libpng": 776,
+        "php": 917,
+        "openssl": 486
+      },
+      "targets": {
+        "poppler/pdfimages": 2901,
+        "libxml2/xmllint": 4019,
+        "libtiff/tiff_read_rgba_fuzzer": 1383,
+        "poppler/pdf_fuzzer": 1549,
+        "sqlite3/sqlite3_fuzz": 286,
+        "libpng/libpng_read_fuzzer": 776,
+        "php/exif": 917,
+        "libtiff/tiffcp": 1781,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 4732,
+        "poppler/pdftoppm": 1922,
+        "openssl/client": 137,
+        "openssl/x509": 144,
+        "openssl/asn1": 96,
+        "openssl/server": 109
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          8530
+        ],
+        [
+          "JCH207",
+          5810
+        ],
+        [
+          "AAH015",
+          2408
+        ],
+        [
+          "MAE016",
+          847
+        ],
+        [
+          "AAH003",
+          685
+        ],
+        [
+          "JCH209",
+          372
+        ],
+        [
+          "AAH017",
+          338
+        ],
+        [
+          "AAH055",
+          254
+        ],
+        [
+          "AAH022",
+          221
+        ],
+        [
+          "AAH056",
+          214
+        ]
+      ],
+      "unmatched_examples": [
+        "./afl_libtiff_tiffcp_NEW.4IP",
+        "./afl_poppler_pdftoppm_NEW.5U4",
+        "./afl_poppler_pdf_fuzzer_NEW.CHN",
+        "./afl_openssl_client_NEW.fjY",
+        "./afl_openssl_client_NEW.BtG"
+      ]
+    },
+    "poc_aflfast.tar.gz": {
+      "files": 33180,
+      "matched": 32550,
+      "unmatched": 630,
+      "bug_ids": 26,
+      "projects": {
+        "poppler": 7468,
+        "sqlite3": 1348,
+        "libxml2": 17197,
+        "libtiff": 4114,
+        "openssl": 915,
+        "php": 1022,
+        "libpng": 486
+      },
+      "targets": {
+        "poppler/pdfimages": 3486,
+        "sqlite3/sqlite3_fuzz": 1348,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 9360,
+        "libtiff/tiff_read_rgba_fuzzer": 1973,
+        "libxml2/xmllint": 7837,
+        "libtiff/tiffcp": 2141,
+        "openssl/x509": 530,
+        "poppler/pdftoppm": 2278,
+        "poppler/pdf_fuzzer": 1704,
+        "openssl/client": 180,
+        "php/exif": 1022,
+        "openssl/server": 120,
+        "libpng/libpng_read_fuzzer": 486,
+        "openssl/asn1": 85
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          14821
+        ],
+        [
+          "JCH207",
+          6330
+        ],
+        [
+          "AAH015",
+          2992
+        ],
+        [
+          "AAH037",
+          2278
+        ],
+        [
+          "JCH215",
+          950
+        ],
+        [
+          "JCH209",
+          918
+        ],
+        [
+          "MAE016",
+          880
+        ],
+        [
+          "AAH055",
+          604
+        ],
+        [
+          "AAH020",
+          529
+        ],
+        [
+          "AAH003",
+          470
+        ]
+      ],
+      "unmatched_examples": [
+        "./aflfast_poppler_pdf_fuzzer_NEW.fLf",
+        "./aflfast_poppler_pdf_fuzzer_NEW.7zK",
+        "./aflfast_poppler_pdf_fuzzer_NEW.fMv",
+        "./aflfast_poppler_pdf_fuzzer_NEW.glr",
+        "./aflfast_poppler_pdf_fuzzer_NEW.R0c"
+      ]
+    },
+    "poc_aflplusplus.tar.gz": {
+      "files": 35182,
+      "matched": 35079,
+      "unmatched": 103,
+      "bug_ids": 28,
+      "projects": {
+        "php": 1443,
+        "libxml2": 19609,
+        "libtiff": 3691,
+        "poppler": 7341,
+        "sqlite3": 1777,
+        "openssl": 584,
+        "libpng": 634
+      },
+      "targets": {
+        "php/exif": 1443,
+        "libxml2/xmllint": 7631,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 11978,
+        "libtiff/tiff_read_rgba_fuzzer": 2197,
+        "poppler/pdfimages": 3455,
+        "poppler/pdftoppm": 2085,
+        "sqlite3/sqlite3_fuzz": 1777,
+        "poppler/pdf_fuzzer": 1801,
+        "openssl/client": 127,
+        "libpng/libpng_read_fuzzer": 634,
+        "libtiff/tiffcp": 1494,
+        "openssl/x509": 344,
+        "openssl/asn1": 55,
+        "openssl/server": 58
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          15920
+        ],
+        [
+          "JCH207",
+          6013
+        ],
+        [
+          "AAH037",
+          3602
+        ],
+        [
+          "AAH015",
+          3299
+        ],
+        [
+          "MAE016",
+          1128
+        ],
+        [
+          "JCH215",
+          1048
+        ],
+        [
+          "JCH209",
+          971
+        ],
+        [
+          "AAH003",
+          611
+        ],
+        [
+          "JCH232",
+          601
+        ],
+        [
+          "AAH055",
+          396
+        ]
+      ],
+      "unmatched_examples": [
+        "./aflplusplus_libtiff_tiffcp_NEW.4Sj",
+        "./aflplusplus_openssl_client_NEW.Arv",
+        "./aflplusplus_libtiff_tiffcp_NEW.B7L",
+        "./aflplusplus_openssl_client_NEW.Hil",
+        "./aflplusplus_libtiff_tiffcp_NEW.pIj"
+      ]
+    },
+    "poc_aflplusplus_lto.tar.gz": {
+      "files": 31624,
+      "matched": 31560,
+      "unmatched": 64,
+      "bug_ids": 26,
+      "projects": {
+        "libxml2": 23815,
+        "openssl": 257,
+        "libtiff": 1842,
+        "sqlite3": 3370,
+        "libpng": 1216,
+        "php": 1060
+      },
+      "targets": {
+        "libxml2/xmllint": 10206,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 13609,
+        "openssl/x509": 257,
+        "libtiff/tiffcp": 1842,
+        "sqlite3/sqlite3_fuzz": 3370,
+        "libpng/libpng_read_fuzzer": 1216,
+        "php/exif": 1060
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          19194
+        ],
+        [
+          "AAH037",
+          4204
+        ],
+        [
+          "JCH215",
+          1610
+        ],
+        [
+          "JCH232",
+          1595
+        ],
+        [
+          "AAH015",
+          1547
+        ],
+        [
+          "MAE016",
+          1035
+        ],
+        [
+          "AAH003",
+          747
+        ],
+        [
+          "AAH007",
+          448
+        ],
+        [
+          "AAH032",
+          373
+        ],
+        [
+          "AAH055",
+          249
+        ]
+      ],
+      "unmatched_examples": [
+        "./aflplusplus_lto_libtiff_tiffcp_NEW.Jdp",
+        "./aflplusplus_lto_sqlite3_sqlite3_fuzz_NEW.lmg",
+        "./aflplusplus_lto_sqlite3_sqlite3_fuzz_NEW.yiN",
+        "./aflplusplus_lto_libtiff_tiffcp_NEW.Uh4",
+        "./aflplusplus_lto_libtiff_tiffcp_NEW.ZOr"
+      ]
+    },
+    "poc_honggfuzz.tar.gz": {
+      "files": 6715,
+      "matched": 5315,
+      "unmatched": 1400,
+      "bug_ids": 36,
+      "projects": {
+        "sqlite3": 211,
+        "poppler": 4388,
+        "php": 164,
+        "libtiff": 124,
+        "libpng": 77,
+        "libxml2": 266,
+        "openssl": 85
+      },
+      "targets": {
+        "sqlite3/sqlite3_fuzz": 211,
+        "poppler/pdftoppm": 1341,
+        "poppler/pdf_fuzzer": 1426,
+        "php/exif": 164,
+        "poppler/pdfimages": 1621,
+        "libtiff/tiffcp": 72,
+        "libpng/libpng_read_fuzzer": 77,
+        "libxml2/xmllint": 117,
+        "openssl/asn1": 45,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 149,
+        "openssl/x509": 10,
+        "openssl/server": 24,
+        "libtiff/tiff_read_rgba_fuzzer": 52,
+        "openssl/client": 6
+      },
+      "top_bug_ids": [
+        [
+          "JCH207",
+          4302
+        ],
+        [
+          "AAH037",
+          147
+        ],
+        [
+          "MAE016",
+          119
+        ],
+        [
+          "JCH215",
+          89
+        ],
+        [
+          "JCH232",
+          89
+        ],
+        [
+          "AAH055",
+          59
+        ],
+        [
+          "AAH052",
+          48
+        ],
+        [
+          "AAH041",
+          40
+        ],
+        [
+          "AAH007",
+          37
+        ],
+        [
+          "AAH024",
+          35
+        ]
+      ],
+      "unmatched_examples": [
+        "./honggfuzz_php_parser_NEW.LTb",
+        "./honggfuzz_php_parser_NEW.2Bv",
+        "./honggfuzz_php_parser_NEW.V4N",
+        "./honggfuzz_php_parser_NEW.XQr",
+        "./honggfuzz_php_parser_NEW.nwW"
+      ]
+    },
+    "poc_moptafl.tar.gz": {
+      "files": 70610,
+      "matched": 67558,
+      "unmatched": 3052,
+      "bug_ids": 45,
+      "projects": {
+        "php": 1439,
+        "libxml2": 22283,
+        "poppler": 27554,
+        "sqlite3": 5702,
+        "libtiff": 8807,
+        "openssl": 1216,
+        "libpng": 557
+      },
+      "targets": {
+        "php/exif": 1439,
+        "libxml2/xmllint": 9509,
+        "poppler/pdftoppm": 9695,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 12774,
+        "poppler/pdf_fuzzer": 8475,
+        "sqlite3/sqlite3_fuzz": 5702,
+        "libtiff/tiffcp": 4972,
+        "poppler/pdfimages": 9384,
+        "libtiff/tiff_read_rgba_fuzzer": 3835,
+        "openssl/x509": 255,
+        "openssl/asn1": 323,
+        "libpng/libpng_read_fuzzer": 557,
+        "openssl/client": 447,
+        "openssl/server": 191
+      },
+      "top_bug_ids": [
+        [
+          "JCH207",
+          23820
+        ],
+        [
+          "AAH041",
+          17094
+        ],
+        [
+          "AAH015",
+          7078
+        ],
+        [
+          "AAH037",
+          4836
+        ],
+        [
+          "JCH232",
+          2767
+        ],
+        [
+          "JCH215",
+          2662
+        ],
+        [
+          "AAH052",
+          1937
+        ],
+        [
+          "JCH209",
+          1523
+        ],
+        [
+          "MAE016",
+          1381
+        ],
+        [
+          "AAH056",
+          618
+        ]
+      ],
+      "unmatched_examples": [
+        "./moptafl_poppler_pdftoppm_NEW.ebi",
+        "./moptafl_poppler_pdfimages_NEW.81y",
+        "./moptafl_poppler_pdf_fuzzer_NEW.n85",
+        "./moptafl_poppler_pdfimages_NEW.RYX",
+        "./moptafl_poppler_pdf_fuzzer_NEW.7Ye"
+      ]
+    },
+    "poc_angora.tar.gz": {
+      "files": 82840,
+      "matched": 82835,
+      "unmatched": 5,
+      "bug_ids": 8,
+      "projects": {
+        "libtiff": 695,
+        "libxml2": 82140
+      },
+      "targets": {
+        "libtiff/tiffcp": 695,
+        "libxml2/xmllint": 82140
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          81790
+        ],
+        [
+          "AAH015",
+          443
+        ],
+        [
+          "AAH037",
+          302
+        ],
+        [
+          "AAH022",
+          126
+        ],
+        [
+          "AAH014",
+          58
+        ],
+        [
+          "AAH013",
+          54
+        ],
+        [
+          "AAH032",
+          48
+        ],
+        [
+          "AAH020",
+          14
+        ]
+      ],
+      "unmatched_examples": [
+        "./angora_libtiff_tiffcp_NEW.yNf",
+        "./angora_libtiff_tiffcp_NEW.5UT",
+        "./angora_libtiff_tiffcp_NEW.PWN",
+        "./angora_libtiff_tiffcp_NEW.Dlt",
+        "./angora_libtiff_tiffcp_NEW.KKB"
+      ]
+    },
+    "poc_instrim.tar.gz": {
+      "files": 11117,
+      "matched": 10995,
+      "unmatched": 122,
+      "bug_ids": 19,
+      "projects": {
+        "libxml2": 6633,
+        "poppler": 1978,
+        "libpng": 241,
+        "php": 525,
+        "libtiff": 1418,
+        "openssl": 200
+      },
+      "targets": {
+        "libxml2/xmllint": 3300,
+        "poppler/pdf_fuzzer": 511,
+        "libpng/libpng_read_fuzzer": 241,
+        "libxml2/libxml2_xml_read_memory_fuzzer": 3333,
+        "poppler/pdftoppm": 544,
+        "php/exif": 525,
+        "libtiff/tiffcp": 530,
+        "poppler/pdfimages": 923,
+        "libtiff/tiff_read_rgba_fuzzer": 888,
+        "openssl/client": 141,
+        "openssl/server": 59
+      },
+      "top_bug_ids": [
+        [
+          "AAH041",
+          6184
+        ],
+        [
+          "JCH207",
+          1873
+        ],
+        [
+          "AAH015",
+          1144
+        ],
+        [
+          "AAH037",
+          449
+        ],
+        [
+          "MAE016",
+          373
+        ],
+        [
+          "AAH003",
+          241
+        ],
+        [
+          "AAH056",
+          184
+        ],
+        [
+          "MAE008",
+          136
+        ],
+        [
+          "AAH020",
+          125
+        ],
+        [
+          "AAH052",
+          105
+        ]
+      ],
+      "unmatched_examples": [
+        "./instrim_poppler_pdfimages_NEW.OKl",
+        "./instrim_poppler_pdf_fuzzer_NEW.pNh",
+        "./instrim_poppler_pdf_fuzzer_NEW.a3I",
+        "./instrim_poppler_pdfimages_NEW.DKw",
+        "./instrim_poppler_pdfimages_NEW.wd4"
+      ]
+    }
+  },
+  "union": {
+    "archive_files": 292357,
+    "matched_poc_files": 286644,
+    "distinct_bug_ids": 49,
+    "projects": {
+      "poppler": 55101,
+      "libxml2": 180694,
+      "libtiff": 23855,
+      "sqlite3": 12694,
+      "libpng": 3987,
+      "php": 6570,
+      "openssl": 3743
+    },
+    "targets": {
+      "poppler/pdfimages": 21770,
+      "libxml2/xmllint": 124759,
+      "libtiff/tiff_read_rgba_fuzzer": 10328,
+      "poppler/pdf_fuzzer": 15466,
+      "sqlite3/sqlite3_fuzz": 12694,
+      "libpng/libpng_read_fuzzer": 3987,
+      "php/exif": 6570,
+      "libtiff/tiffcp": 13527,
+      "libxml2/libxml2_xml_read_memory_fuzzer": 55935,
+      "poppler/pdftoppm": 17865,
+      "openssl/client": 1038,
+      "openssl/x509": 1540,
+      "openssl/asn1": 604,
+      "openssl/server": 561
+    },
+    "legacy_inventory_ids": 120,
+    "legacy_covered": 49,
+    "legacy_missing": 71,
+    "legacy_cves": 45,
+    "legacy_high_bug_ids": 31,
+    "html_inventory_ids": 138,
+    "html_covered": 0,
+    "html_missing": 138,
+    "covered_legacy_ids": [
+      "AAH001",
+      "AAH003",
+      "AAH007",
+      "AAH008",
+      "AAH009",
+      "AAH010",
+      "AAH013",
+      "AAH014",
+      "AAH015",
+      "AAH016",
+      "AAH017",
+      "AAH020",
+      "AAH022",
+      "AAH024",
+      "AAH025",
+      "AAH026",
+      "AAH029",
+      "AAH032",
+      "AAH035",
+      "AAH037",
+      "AAH041",
+      "AAH042",
+      "AAH043",
+      "AAH045",
+      "AAH046",
+      "AAH048",
+      "AAH049",
+      "AAH050",
+      "AAH052",
+      "AAH055",
+      "AAH056",
+      "JCH201",
+      "JCH207",
+      "JCH209",
+      "JCH210",
+      "JCH212",
+      "JCH215",
+      "JCH216",
+      "JCH223",
+      "JCH226",
+      "JCH227",
+      "JCH228",
+      "JCH229",
+      "JCH232",
+      "MAE008",
+      "MAE014",
+      "MAE016",
+      "MAE104",
+      "MAE115"
+    ],
+    "missing_legacy_ids": [
+      "AAH002",
+      "AAH004",
+      "AAH005",
+      "AAH011",
+      "AAH012",
+      "AAH018",
+      "AAH019",
+      "AAH021",
+      "AAH027",
+      "AAH028",
+      "AAH030",
+      "AAH031",
+      "AAH033",
+      "AAH034",
+      "AAH036",
+      "AAH038",
+      "AAH039",
+      "AAH040",
+      "AAH047",
+      "AAH051",
+      "AAH053",
+      "AAH054",
+      "AAH057",
+      "AAH058",
+      "AAH059",
+      "JCH202",
+      "JCH203",
+      "JCH204",
+      "JCH206",
+      "JCH208",
+      "JCH211",
+      "JCH214",
+      "JCH217",
+      "JCH218",
+      "JCH219",
+      "JCH220",
+      "JCH221",
+      "JCH222",
+      "JCH225",
+      "JCH230",
+      "JCH231",
+      "JCH233",
+      "JCH234",
+      "MAE001",
+      "MAE002",
+      "MAE004",
+      "MAE006",
+      "MAE009",
+      "MAE010",
+      "MAE011",
+      "MAE012",
+      "MAE013",
+      "MAE015",
+      "MAE017",
+      "MAE018",
+      "MAE019",
+      "MAE020",
+      "MAE021",
+      "MAE100",
+      "MAE102",
+      "MAE103",
+      "MAE105",
+      "MAE106",
+      "MAE107",
+      "MAE108",
+      "MAE109",
+      "MAE110",
+      "MAE111",
+      "MAE112",
+      "MAE113",
+      "MAE114"
+    ],
+    "covered_html_ids": []
+  }
+}

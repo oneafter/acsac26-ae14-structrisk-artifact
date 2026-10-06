@@ -1,0 +1,5 @@
+{
+  "Public-Severity": {"NDCG@5": 0.5126, "MAP": 0.4696},
+  "StructRisk+LLM-LCR": {"Hits@1": 0.9000, "Hits@3": 1.7000, "NDCG@5": 0.9023, "MRR": 0.9333, "MAP": 0.8750},
+  "significance": {"NDCG@5_p": 0.0049, "MAP_p": 0.0068}
+}

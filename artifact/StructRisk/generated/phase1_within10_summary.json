@@ -1,0 +1,68 @@
+{
+  "projects": [
+    "binaryen",
+    "lily",
+    "openbabel",
+    "raylib",
+    "sokol",
+    "soloud",
+    "squirrel",
+    "wabt",
+    "wren",
+    "xlnt"
+  ],
+  "project_rows": [
+    {
+      "project": "binaryen",
+      "findings": 7,
+      "positives": 1
+    },
+    {
+      "project": "lily",
+      "findings": 6,
+      "positives": 2
+    },
+    {
+      "project": "openbabel",
+      "findings": 3,
+      "positives": 2
+    },
+    {
+      "project": "raylib",
+      "findings": 13,
+      "positives": 2
+    },
+    {
+      "project": "sokol",
+      "findings": 5,
+      "positives": 2
+    },
+    {
+      "project": "soloud",
+      "findings": 12,
+      "positives": 2
+    },
+    {
+      "project": "squirrel",
+      "findings": 10,
+      "positives": 2
+    },
+    {
+      "project": "wabt",
+      "findings": 5,
+      "positives": 2
+    },
+    {
+      "project": "wren",
+      "findings": 6,
+      "positives": 2
+    },
+    {
+      "project": "xlnt",
+      "findings": 15,
+      "positives": 2
+    }
+  ],
+  "total_findings": 82,
+  "total_positives": 19
+}

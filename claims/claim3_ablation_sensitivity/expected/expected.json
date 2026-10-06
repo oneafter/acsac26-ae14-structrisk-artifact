@@ -1,0 +1,10 @@
+{
+  "Full": {"HighRisk@10": 8, "NDCG@10": 0.8522},
+  "-weak": {"HighRisk@10": 5, "NDCG@10": 0.5965},
+  "weight_sensitivity": {
+    "WP_core_NDCG@5_range": [0.8534, 0.8622],
+    "WP_core_MAP_range": [0.8075, 0.8250],
+    "WP_LCR_NDCG@5_range": [0.8717, 0.9023],
+    "WP_LCR_MAP_range": [0.8333, 0.8750]
+  }
+}

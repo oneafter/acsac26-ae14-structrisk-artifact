@@ -1,0 +1,10 @@
+{
+  "HighRisk@5": 5,
+  "NDCG@5": 1.0,
+  "HighRisk@10": 8,
+  "NDCG@10": 0.8522,
+  "Rank-to-First-HighRisk": 1,
+  "Effort-to-First-HighRisk": 8.03,
+  "Effort-per-HighRisk": 54.73,
+  "Abstention precision": 0.7
+}

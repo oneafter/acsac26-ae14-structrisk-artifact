@@ -1,0 +1,4 @@
+Error: Couldn't launch "/magma_out/lua @@"
+
+Caused by:
+    No such file or directory (os error 2)

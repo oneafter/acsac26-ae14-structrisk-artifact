@@ -1,0 +1,727 @@
+{
+  "input": "StructRisk/generated/magma_unified_crash_backed_findings.jsonl",
+  "train": "StructRisk/generated/phase1_offline_dev.jsonl",
+  "findings": 49,
+  "projects": 9,
+  "high_or_critical_positives": 31,
+  "high_findings": 31,
+  "global": {
+    "Oracle-CVSS": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 10,
+      "NDCG@10": 1.0,
+      "HighRisk@20": 20,
+      "NDCG@20": 1.0,
+      "Rank-to-First-HighRisk": 1
+    },
+    "Support-Count": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.9031,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.8588,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.8127,
+      "Rank-to-First-HighRisk": 1
+    },
+    "Artifact-Completeness": {
+      "HighRisk@5": 3,
+      "NDCG@5": 0.7943,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.8301,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.7818,
+      "Rank-to-First-HighRisk": 1
+    },
+    "ASan-Severity": {
+      "HighRisk@5": 1,
+      "NDCG@5": 0.3641,
+      "HighRisk@10": 4,
+      "NDCG@10": 0.5131,
+      "HighRisk@20": 12,
+      "NDCG@20": 0.6429,
+      "Rank-to-First-HighRisk": 4
+    },
+    "Crash-State": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.8062,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.796,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.7721,
+      "Rank-to-First-HighRisk": 2
+    },
+    "StackDedup-kNN": {
+      "HighRisk@5": 1,
+      "NDCG@5": 0.3641,
+      "HighRisk@10": 4,
+      "NDCG@10": 0.5131,
+      "HighRisk@20": 12,
+      "NDCG@20": 0.6429,
+      "Rank-to-First-HighRisk": 4
+    },
+    "StructRisk": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.9031,
+      "HighRisk@10": 8,
+      "NDCG@10": 0.8923,
+      "HighRisk@20": 15,
+      "NDCG@20": 0.8688,
+      "Rank-to-First-HighRisk": 1
+    },
+    "CASR-Severity": {
+      "HighRisk@5": 4,
+      "NDCG@5": 0.9031,
+      "HighRisk@10": 7,
+      "NDCG@10": 0.8588,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.8127,
+      "Rank-to-First-HighRisk": 1
+    }
+  },
+  "within_project": {
+    "Oracle-CVSS": {
+      "HR@1": 1.0,
+      "HR@3": 2.7142857142857144,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 1.0,
+      "projects": 7
+    },
+    "Support-Count": {
+      "HR@1": 0.8571428571428571,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8996237644370124,
+      "MRR": 0.9285714285714286,
+      "MAP": 0.8672840651412079,
+      "projects": 7
+    },
+    "Artifact-Completeness": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.4285714285714284,
+      "NDCG@5": 0.8803404402463793,
+      "MRR": 0.8571428571428571,
+      "MAP": 0.8006173984745413,
+      "projects": 7
+    },
+    "ASan-Severity": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8739059088754616,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.787454648526077,
+      "projects": 7
+    },
+    "Crash-State": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8793311097528014,
+      "MRR": 0.8571428571428571,
+      "MAP": 0.7958554937126365,
+      "projects": 7
+    },
+    "StackDedup-kNN": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8739059088754616,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.787454648526077,
+      "projects": 7
+    },
+    "StructRisk": {
+      "HR@1": 0.8571428571428571,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.9035846827046504,
+      "MRR": 0.9285714285714286,
+      "MAP": 0.8713832199546484,
+      "projects": 7
+    },
+    "CASR-Severity": {
+      "HR@1": 0.8571428571428571,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8996237644370124,
+      "MRR": 0.9285714285714286,
+      "MAP": 0.8672840651412079,
+      "projects": 7
+    }
+  },
+  "within_project_rows": {
+    "Oracle-CVSS": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      }
+    ],
+    "Support-Count": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.8412698412698413
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8777221344374128,
+        "MRR": 1.0,
+        "MAP": 0.8099999999999999
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 1,
+        "NDCG@5": 0.5780861751102729,
+        "MRR": 0.5,
+        "MAP": 0.4375757575757576
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "Artifact-Completeness": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 1,
+        "NDCG@5": 0.8579514172105233,
+        "MRR": 0.5,
+        "MAP": 0.5
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.8412698412698413
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8777221344374128,
+        "MRR": 1.0,
+        "MAP": 0.8099999999999999
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.5851514885653175,
+        "MRR": 0.5,
+        "MAP": 0.4709090909090909
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "ASan-Severity": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.810515873015873
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.746517056925071,
+        "MRR": 1.0,
+        "MAP": 0.7595238095238095
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "Crash-State": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 1,
+        "NDCG@5": 0.8579514172105233,
+        "MRR": 0.5,
+        "MAP": 0.5
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.8412698412698413
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8777221344374128,
+        "MRR": 1.0,
+        "MAP": 0.8099999999999999
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 1,
+        "NDCG@5": 0.5780861751102729,
+        "MRR": 0.5,
+        "MAP": 0.4375757575757576
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "StackDedup-kNN": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.810515873015873
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.746517056925071,
+        "MRR": 1.0,
+        "MAP": 0.7595238095238095
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "StructRisk": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 0.9799889788426707,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8196294557259916,
+        "MRR": 1.0,
+        "MAP": 0.7884920634920635
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8777221344374128,
+        "MRR": 1.0,
+        "MAP": 0.8099999999999999
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.6477522099264775,
+        "MRR": 0.5,
+        "MAP": 0.519047619047619
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "CASR-Severity": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.8412698412698413
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8777221344374128,
+        "MRR": 1.0,
+        "MAP": 0.8099999999999999
+      },
+      {
+        "project": "openssl",
+        "findings": 5,
+        "positives": 4,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 1,
+        "NDCG@5": 0.5780861751102729,
+        "MRR": 0.5,
+        "MAP": 0.4375757575757576
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ]
+  },
+  "casr_ranked": "StructRisk/generated/magma_unified_crash_backed_external_casr_ranked.jsonl"
+}

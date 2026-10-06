@@ -1,0 +1,12 @@
+Claim 4: MAGMA crash-backed validation
+======================================
+
+The same frozen StructRisk scorer transfers to an external crash-backed MAGMA
+slice without retraining. On 49 deduplicated findings across nine MAGMA projects
+with 31 HIGH-or-CRITICAL finding-level positives, StructRisk achieves the best
+non-oracle HR@10 = 8 and NDCG@10 = 0.8923.
+
+Canonical outputs:
+
+  artifact/StructRisk/generated/magma_unified_crash_backed_external_metrics.json
+  artifact/StructRisk/generated/magma_inventory_audit.json

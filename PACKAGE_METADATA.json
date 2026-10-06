@@ -1,0 +1,10 @@
+{
+  "artifact_version": "2026-09-21-r5",
+  "paper_submission": 154,
+  "paper_sha256": "f89814b5363b6879d8c3ff340d321946667af44ce21f9d21dd6e4e1e2b95afa7",
+  "generated_at_utc": "2026-09-21T08:34:56.314303+00:00",
+  "checksummed_file_count": 559,
+  "checksum_file": "SHA256SUMS.txt",
+  "tree_file": "TREE.txt",
+  "excluded_runtime_directory": "reproduced/"
+}

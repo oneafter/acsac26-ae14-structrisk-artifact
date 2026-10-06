@@ -1,0 +1,8 @@
+StructRisk ACSAC 2026 reviewer artifact
+Artifact version: 2026-09-21-r5
+Submission: #154
+Official submitted PDF SHA-256: f89814b5363b6879d8c3ff340d321946667af44ce21f9d21dd6e4e1e2b95afa7
+
+This release is synchronized with the submitted PDF.
+The dataset, labels, splits, ranking outputs, model responses, and
+Tables 3--6 point estimates are included for offline evaluation.

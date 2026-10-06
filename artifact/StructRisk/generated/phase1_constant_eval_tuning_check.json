@@ -1,0 +1,51 @@
+{
+  "description": "Two-sided unclaimed-headroom check over the 17 hand-tunable rule constants, using a like-for-like reconstruction of the original scripted coordinate search (the original calibration script is not part of this package). Against its own Dev calibration target the search finds zero headroom (no constant moves); against the Eval objectives it immediately finds headroom an Eval calibration would have captured. Together: calibrated on Dev, not tuned on Eval.",
+  "search_constants": [
+    "eu_support",
+    "eu_site",
+    "eu_spread",
+    "fs_base",
+    "fs_strong",
+    "fs_deadly",
+    "fs_site",
+    "fs_exact",
+    "fs_exit",
+    "fs_assert",
+    "fs_weakpat",
+    "fs_san",
+    "gate_slope",
+    "gate_floor",
+    "ss_bonus",
+    "ss_min_count",
+    "ss_weak_max"
+  ],
+  "dev_objective": {
+    "paper": 0.814128343791064,
+    "optimized": 0.814128343791064,
+    "constants_moved": {}
+  },
+  "eval_objective": {
+    "paper": {
+      "eval_g_ndcg10": 0.8521705090845475,
+      "eval_wp_ndcg5": 0.8980725016207016
+    },
+    "optimized": {
+      "eval_g_ndcg10": 0.8553475075669357,
+      "eval_wp_ndcg5": 0.9103509700868966
+    },
+    "constants_moved": {
+      "fs_base": [
+        0.2,
+        0.4
+      ],
+      "gate_slope": [
+        1.2,
+        0.6
+      ]
+    }
+  },
+  "objective_evaluations": {
+    "dev": 103,
+    "eval": 205
+  }
+}

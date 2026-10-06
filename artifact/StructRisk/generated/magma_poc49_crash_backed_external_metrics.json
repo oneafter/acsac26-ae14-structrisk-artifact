@@ -1,0 +1,637 @@
+{
+  "input": "StructRisk/generated/magma_poc49_crash_backed_findings.jsonl",
+  "train": "StructRisk/generated/phase1_offline_dev.jsonl",
+  "findings": 46,
+  "projects": 7,
+  "high_findings": 30,
+  "global": {
+    "Oracle-CVSS": {
+      "HighRisk@5": 5,
+      "NDCG@5": 1.0,
+      "HighRisk@10": 10,
+      "NDCG@10": 1.0,
+      "HighRisk@20": 20,
+      "NDCG@20": 1.0,
+      "Rank-to-First-HighRisk": 1
+    },
+    "Support-Count": {
+      "HighRisk@5": 2,
+      "NDCG@5": 0.4953,
+      "HighRisk@10": 5,
+      "NDCG@10": 0.5909,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.6939,
+      "Rank-to-First-HighRisk": 4
+    },
+    "Artifact-Completeness": {
+      "HighRisk@5": 3,
+      "NDCG@5": 0.779,
+      "HighRisk@10": 4,
+      "NDCG@10": 0.6625,
+      "HighRisk@20": 11,
+      "NDCG@20": 0.7191,
+      "Rank-to-First-HighRisk": 1
+    },
+    "ASan-Severity": {
+      "HighRisk@5": 2,
+      "NDCG@5": 0.4953,
+      "HighRisk@10": 4,
+      "NDCG@10": 0.5586,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.6944,
+      "Rank-to-First-HighRisk": 4
+    },
+    "Crash-State": {
+      "HighRisk@5": 2,
+      "NDCG@5": 0.4953,
+      "HighRisk@10": 5,
+      "NDCG@10": 0.5909,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.6939,
+      "Rank-to-First-HighRisk": 4
+    },
+    "StackDedup-kNN": {
+      "HighRisk@5": 2,
+      "NDCG@5": 0.4953,
+      "HighRisk@10": 4,
+      "NDCG@10": 0.5586,
+      "HighRisk@20": 13,
+      "NDCG@20": 0.6944,
+      "Rank-to-First-HighRisk": 4
+    },
+    "StructRisk": {
+      "HighRisk@5": 3,
+      "NDCG@5": 0.7853,
+      "HighRisk@10": 5,
+      "NDCG@10": 0.7343,
+      "HighRisk@20": 10,
+      "NDCG@20": 0.706,
+      "Rank-to-First-HighRisk": 1
+    }
+  },
+  "within_project": {
+    "Oracle-CVSS": {
+      "HR@1": 1.0,
+      "HR@3": 2.7142857142857144,
+      "NDCG@5": 1.0,
+      "MRR": 1.0,
+      "MAP": 1.0,
+      "projects": 7
+    },
+    "Support-Count": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.0,
+      "NDCG@5": 0.8428464626616063,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.7225602232234885,
+      "projects": 7
+    },
+    "Artifact-Completeness": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.0,
+      "NDCG@5": 0.8530649243462103,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.732084032747298,
+      "projects": 7
+    },
+    "ASan-Severity": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8739059088754616,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.787454648526077,
+      "projects": 7
+    },
+    "Crash-State": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.0,
+      "NDCG@5": 0.8428464626616063,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.7225602232234885,
+      "projects": 7
+    },
+    "StackDedup-kNN": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 2.2857142857142856,
+      "NDCG@5": 0.8739059088754616,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.787454648526077,
+      "projects": 7
+    },
+    "StructRisk": {
+      "HR@1": 0.7142857142857143,
+      "HR@3": 1.8571428571428572,
+      "NDCG@5": 0.8426835690135244,
+      "MRR": 0.8214285714285714,
+      "MAP": 0.7291820537738906,
+      "projects": 7
+    }
+  },
+  "within_project_rows": {
+    "Oracle-CVSS": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      }
+    ],
+    "Support-Count": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8196294557259916,
+        "MRR": 1.0,
+        "MAP": 0.7597222222222223
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.9505808121311283,
+        "MRR": 1.0,
+        "MAP": 0.8055555555555555
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.6004487070823645,
+        "MRR": 1.0,
+        "MAP": 0.5709090909090909
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.961734693877551
+      }
+    ],
+    "Artifact-Completeness": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8196294557259916,
+        "MRR": 1.0,
+        "MAP": 0.7597222222222223
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.9505808121311283,
+        "MRR": 1.0,
+        "MAP": 0.8055555555555555
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.6719779388745929,
+        "MRR": 1.0,
+        "MAP": 0.6375757575757576
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.961734693877551
+      }
+    ],
+    "ASan-Severity": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.810515873015873
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.746517056925071,
+        "MRR": 1.0,
+        "MAP": 0.7595238095238095
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "Crash-State": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.8196294557259916,
+        "MRR": 1.0,
+        "MAP": 0.7597222222222223
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.9505808121311283,
+        "MRR": 1.0,
+        "MAP": 0.8055555555555555
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.6004487070823645,
+        "MRR": 1.0,
+        "MAP": 0.5709090909090909
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.961734693877551
+      }
+    ],
+    "StackDedup-kNN": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.723072095276683,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 0.8415580415114009,
+        "MRR": 1.0,
+        "MAP": 0.810515873015873
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.746517056925071,
+        "MRR": 1.0,
+        "MAP": 0.7595238095238095
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.9821428571428571
+      }
+    ],
+    "StructRisk": [
+      {
+        "project": "libpng",
+        "findings": 4,
+        "positives": 1,
+        "HR@1": 0,
+        "HR@3": 0,
+        "NDCG@5": 0.6165356581845756,
+        "MRR": 0.25,
+        "MAP": 0.25
+      },
+      {
+        "project": "libtiff",
+        "findings": 9,
+        "positives": 6,
+        "HR@1": 1,
+        "HR@3": 1,
+        "NDCG@5": 0.7808192186449511,
+        "MRR": 1.0,
+        "MAP": 0.6912698412698414
+      },
+      {
+        "project": "libxml2",
+        "findings": 6,
+        "positives": 5,
+        "HR@1": 0,
+        "HR@3": 2,
+        "NDCG@5": 0.8061941684150765,
+        "MRR": 0.5,
+        "MAP": 0.7100000000000001
+      },
+      {
+        "project": "openssl",
+        "findings": 4,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.9505808121311283,
+        "MRR": 1.0,
+        "MAP": 0.8055555555555555
+      },
+      {
+        "project": "php",
+        "findings": 3,
+        "positives": 3,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 1.0
+      },
+      {
+        "project": "poppler",
+        "findings": 12,
+        "positives": 5,
+        "HR@1": 1,
+        "HR@3": 2,
+        "NDCG@5": 0.7446551257189392,
+        "MRR": 1.0,
+        "MAP": 0.6857142857142857
+      },
+      {
+        "project": "sqlite3",
+        "findings": 8,
+        "positives": 7,
+        "HR@1": 1,
+        "HR@3": 3,
+        "NDCG@5": 1.0,
+        "MRR": 1.0,
+        "MAP": 0.961734693877551
+      }
+    ]
+  },
+  "casr_ranked": ""
+}

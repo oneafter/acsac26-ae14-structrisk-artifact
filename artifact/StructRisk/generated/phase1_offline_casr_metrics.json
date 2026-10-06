@@ -1,0 +1,244 @@
+{
+  "metrics": {
+    "HighRisk@5": 1,
+    "NDCG@5": 0.3392,
+    "HighRisk@10": 4,
+    "NDCG@10": 0.4233,
+    "Rank-to-First-HighRisk": 1,
+    "Effort-to-First-HighRisk": 7.92,
+    "Effort-per-HighRisk": 54.73
+  },
+  "failures": [
+    {
+      "id": "wabt::finding::73259399",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "wabt::finding::93101875",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::77280579",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::93136174",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::17141216",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::50111272",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::93619936",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::61192659",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "mapnik::finding::00519280",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::02232826",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::03124433",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::04743511",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::12744192",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::14134123",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::14853822",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::15912203",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::19391071",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::20318148",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::20511330",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::25077006",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::26295077",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::26862599",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::33055908",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::36813821",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::39223286",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::43199846",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::49853996",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::51146106",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::52761149",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::54248217",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::54325806",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::56498363",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "minisat::finding::34831345",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "openbabel::finding::70823212",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "xlnt::finding::14746173",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::27458735",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::30095594",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "xlnt::finding::55028362",
+      "error": "timeout",
+      "returncode": 124
+    },
+    {
+      "id": "janet::finding::14567654",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "mapnik::finding::74250551",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "OpenCC::finding::96413572",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "openbabel::finding::76898361",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "openbabel::finding::89823471",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "micropython::finding::13571076",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "libfastcommon::finding::92700783",
+      "error": "error",
+      "returncode": 1
+    },
+    {
+      "id": "ettercap::finding::57029665",
+      "error": "error",
+      "returncode": 1
+    }
+  ],
+  "failure_count": 46
+}

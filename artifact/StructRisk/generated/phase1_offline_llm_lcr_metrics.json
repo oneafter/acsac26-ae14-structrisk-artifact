@@ -1,0 +1,139 @@
+{
+  "metrics": {
+    "HighRisk@5": 5,
+    "NDCG@5": 1.0,
+    "HighRisk@10": 8,
+    "NDCG@10": 0.8522,
+    "Rank-to-First-HighRisk": 1,
+    "Effort-to-First-HighRisk": 8.03,
+    "Effort-per-HighRisk": 54.73
+  },
+  "project_summaries": [
+    {
+      "project": "ChaiScript",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "LIEF",
+      "findings": 2,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "OpenCC",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "berry",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "binaryen",
+      "findings": 7,
+      "blocks": 5,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "ettercap",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "janet",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "libfastcommon",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "lobster",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "mapnik",
+      "findings": 25,
+      "blocks": 3,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "micropython",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "minisat",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "mruby",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "openbabel",
+      "findings": 3,
+      "blocks": 2,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "squirrel",
+      "findings": 10,
+      "blocks": 5,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "wabt",
+      "findings": 5,
+      "blocks": 3,
+      "reranked_blocks": 1,
+      "reranked_items": 3
+    },
+    {
+      "project": "wasm3",
+      "findings": 1,
+      "blocks": 1,
+      "reranked_blocks": 0,
+      "reranked_items": 0
+    },
+    {
+      "project": "xlnt",
+      "findings": 15,
+      "blocks": 5,
+      "reranked_blocks": 2,
+      "reranked_items": 9
+    }
+  ]
+}

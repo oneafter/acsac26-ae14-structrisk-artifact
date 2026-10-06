@@ -1,0 +1,5 @@
+{
+  "StructRisk": {"HighRisk@5": 5, "HighRisk@10": 8, "NDCG@5": 1.0, "NDCG@10": 0.8522},
+  "ASan-Severity": {"HighRisk@10": 1, "NDCG@10": 0.1100},
+  "StructRisk_vs_ASan-Severity": {"HighRisk@10_p": 0.0527, "NDCG@10_p": 0.0254, "NDCG@10_diff": 0.7421}
+}

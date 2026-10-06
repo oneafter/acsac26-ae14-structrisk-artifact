@@ -1,0 +1,10 @@
+project,bug_records,distinct_cves,high_or_critical_cves
+libpng,7,6,3
+libsndfile,18,13,6
+libtiff,14,13,7
+libxml2,17,15,10
+lua,4,3,1
+openssl,20,20,12
+php,16,16,16
+poppler,22,19,10
+sqlite3,20,20,19

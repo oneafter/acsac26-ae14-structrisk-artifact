@@ -1,0 +1,272 @@
+{
+  "paper": {
+    "submission_id": 154,
+    "title": "StructRisk: Structured Post-Fuzz Ranking for High-Value Vulnerability Prioritization",
+    "source": "Revised ACSAC 2026 PDF supplied for artifact evaluation on 2026-09-21",
+    "sha256": "f89814b5363b6879d8c3ff340d321946667af44ce21f9d21dd6e4e1e2b95afa7"
+  },
+  "dataset": {
+    "archive_cves": 75,
+    "archive_high_cves": 23,
+    "raw_artifacts": 4482,
+    "findings": 120,
+    "dev_findings": 42,
+    "eval_findings": 78,
+    "eval_projects": 18,
+    "eval_positives": 13,
+    "within_findings": 82,
+    "within_projects": 10,
+    "within_positives": 19
+  },
+  "tables": {
+    "table3_global": {
+      "Public-Severity": {
+        "HighRisk@5": 4,
+        "HighRisk@10": 7,
+        "NDCG@5": 0.786,
+        "NDCG@10": 0.7281,
+        "Rank-to-First-HighRisk": 1
+      },
+      "Support-Count": {
+        "HighRisk@5": 1,
+        "HighRisk@10": 1,
+        "NDCG@5": 0.3392,
+        "NDCG@10": 0.2201,
+        "Rank-to-First-HighRisk": 1
+      },
+      "Artifact-Completeness": {
+        "HighRisk@5": 2,
+        "HighRisk@10": 3,
+        "NDCG@5": 0.3008,
+        "NDCG@10": 0.2614,
+        "Rank-to-First-HighRisk": 3
+      },
+      "ASan-Severity": {
+        "HighRisk@5": 1,
+        "HighRisk@10": 1,
+        "NDCG@5": 0.1696,
+        "NDCG@10": 0.11,
+        "Rank-to-First-HighRisk": 3
+      },
+      "Crash-State": {
+        "HighRisk@5": 2,
+        "HighRisk@10": 4,
+        "NDCG@5": 0.3836,
+        "NDCG@10": 0.3885,
+        "Rank-to-First-HighRisk": 2
+      },
+      "StackDedup-kNN": {
+        "HighRisk@5": 3,
+        "HighRisk@10": 4,
+        "NDCG@5": 0.5296,
+        "NDCG@10": 0.4171,
+        "Rank-to-First-HighRisk": 2
+      },
+      "CASR-Severity": {
+        "HighRisk@5": 1,
+        "HighRisk@10": 4,
+        "NDCG@5": 0.3392,
+        "NDCG@10": 0.4233,
+        "Rank-to-First-HighRisk": 1
+      },
+      "LLM-CardScore": {
+        "HighRisk@5": 4,
+        "HighRisk@10": 5,
+        "NDCG@5": 0.8539,
+        "NDCG@10": 0.6275,
+        "Rank-to-First-HighRisk": 1
+      },
+      "StructRisk": {
+        "HighRisk@5": 5,
+        "HighRisk@10": 8,
+        "NDCG@5": 1.0,
+        "NDCG@10": 0.8522,
+        "Rank-to-First-HighRisk": 1
+      }
+    },
+    "table4_within_project": {
+      "Public-Severity": {
+        "HR@1": 0.293,
+        "HR@3": 0.879,
+        "NDCG@5": 0.5126,
+        "MRR": 0.5153,
+        "MAP": 0.4696
+      },
+      "Support-Count": {
+        "HR@1": 0.4667,
+        "HR@3": 0.9833,
+        "NDCG@5": 0.614,
+        "MRR": 0.6089,
+        "MAP": 0.5568
+      },
+      "Artifact-Completeness": {
+        "HR@1": 0.45,
+        "HR@3": 0.9167,
+        "NDCG@5": 0.563,
+        "MRR": 0.5786,
+        "MAP": 0.5398
+      },
+      "ASan-Severity": {
+        "HR@1": 0.6067,
+        "HR@3": 1.42,
+        "NDCG@5": 0.7699,
+        "MRR": 0.751,
+        "MAP": 0.7197
+      },
+      "Crash-State": {
+        "HR@1": 0.65,
+        "HR@3": 1.55,
+        "NDCG@5": 0.8193,
+        "MRR": 0.8,
+        "MAP": 0.7569
+      },
+      "StackDedup-kNN": {
+        "HR@1": 0.7233,
+        "HR@3": 1.5033,
+        "NDCG@5": 0.829,
+        "MRR": 0.8336,
+        "MAP": 0.7624
+      },
+      "CASR-Severity": {
+        "HR@1": 0.35,
+        "HR@3": 0.9,
+        "NDCG@5": 0.5334,
+        "MRR": 0.5264,
+        "MAP": 0.4986
+      },
+      "LLM-CardScore": {
+        "HR@1": 0.85,
+        "HR@3": 1.65,
+        "NDCG@5": 0.8849,
+        "MRR": 0.9083,
+        "MAP": 0.8444
+      },
+      "StructRisk": {
+        "HR@1": 0.75,
+        "HR@3": 1.6,
+        "NDCG@5": 0.8561,
+        "MRR": 0.85,
+        "MAP": 0.8167
+      },
+      "StructRisk+LLM-LCR": {
+        "HR@1": 0.9,
+        "HR@3": 1.7,
+        "NDCG@5": 0.9023,
+        "MRR": 0.9333,
+        "MAP": 0.875
+      }
+    },
+    "table5_ablation": {
+      "Full": {
+        "NDCG@10": 0.8522,
+        "HighRisk@10": 8,
+        "WP_NDCG@5": 0.8561,
+        "WP_MAP": 0.8167
+      },
+      "-replay": {
+        "NDCG@10": 0.7624,
+        "HighRisk@10": 7,
+        "WP_NDCG@5": 0.8473,
+        "WP_MAP": 0.8054
+      },
+      "-sanitizer": {
+        "NDCG@10": 0.7695,
+        "HighRisk@10": 7,
+        "WP_NDCG@5": 0.8779,
+        "WP_MAP": 0.8221
+      },
+      "-locality": {
+        "NDCG@10": 0.8522,
+        "HighRisk@10": 8,
+        "WP_NDCG@5": 0.8561,
+        "WP_MAP": 0.8111
+      },
+      "-evidence_uniqueness_gated": {
+        "NDCG@10": 0.7885,
+        "HighRisk@10": 7,
+        "WP_NDCG@5": 0.8558,
+        "WP_MAP": 0.8129
+      },
+      "-failure_semantics_gated": {
+        "NDCG@10": 0.791,
+        "HighRisk@10": 7,
+        "WP_NDCG@5": 0.8481,
+        "WP_MAP": 0.8
+      },
+      "-weak": {
+        "NDCG@10": 0.5965,
+        "HighRisk@10": 5,
+        "WP_NDCG@5": 0.8473,
+        "WP_MAP": 0.7999
+      }
+    },
+    "table6_magma": {
+      "Oracle-CVSS": {
+        "HighRisk@10": 10,
+        "NDCG@10": 1.0
+      },
+      "Support-Count": {
+        "HighRisk@10": 7,
+        "NDCG@10": 0.8588
+      },
+      "Artifact-Completeness": {
+        "HighRisk@10": 7,
+        "NDCG@10": 0.8301
+      },
+      "ASan-Severity": {
+        "HighRisk@10": 4,
+        "NDCG@10": 0.5131
+      },
+      "Crash-State": {
+        "HighRisk@10": 7,
+        "NDCG@10": 0.796
+      },
+      "CASR-Severity": {
+        "HighRisk@10": 7,
+        "NDCG@10": 0.8588
+      },
+      "StructRisk": {
+        "HighRisk@10": 8,
+        "NDCG@10": 0.8923
+      }
+    }
+  },
+  "statistics": {
+    "global_structrisk_vs_asan_hr10_p": 0.0527,
+    "global_structrisk_vs_asan_ndcg10_p": 0.0254,
+    "global_structrisk_vs_asan_ndcg10_diff": 0.7421,
+    "within_lcr_vs_public_ndcg5_p": 0.0049,
+    "within_lcr_vs_public_map_p": 0.0068,
+    "eval_only_lcr_vs_public_ndcg5_p": 0.0909,
+    "within_core_vs_public_ndcg5_p": 0.0049,
+    "within_core_vs_public_map_p": 0.0049,
+    "global_structrisk_vs_asan_hr5_p": 0.1094
+  },
+  "sensitivity": {
+    "variant_count": 77,
+    "WP_core_NDCG@5_range": [
+      0.8534,
+      0.8622
+    ],
+    "WP_core_MAP_range": [
+      0.8075,
+      0.825
+    ],
+    "WP_LCR_NDCG@5_range": [
+      0.8717,
+      0.9023
+    ],
+    "WP_LCR_MAP_range": [
+      0.8333,
+      0.875
+    ]
+  },
+  "magma_inventory": {
+    "findings": 49,
+    "projects": 9,
+    "high_or_critical_positives": 31,
+    "bug_records": 138,
+    "distinct_cves": 125,
+    "high_or_critical_cves": 84
+  }
+}

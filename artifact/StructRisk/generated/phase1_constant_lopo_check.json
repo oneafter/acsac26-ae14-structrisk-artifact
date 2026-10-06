@@ -1,0 +1,65 @@
+{
+  "description": "Leave-one-project-out recalibration of the signal-rule constants (the discipline Sec. 4.1 applies to StackDedup-kNN). For every Dev fold the like-for-like search moves zero constants, so LOPO scoring is identical to shipped scoring and the 10-project within-project result -- including the exact tests vs Public-Severity -- is unchanged. Eval projects never entered calibration; their folds are trivially the shipped constants.",
+  "dev_folds": {
+    "lily": {
+      "constants_moved": {},
+      "lopo": {
+        "NDCG@5": 0.5706417189553201,
+        "MAP": 0.41666666666666663
+      },
+      "shipped": {
+        "NDCG@5": 0.5706417189553201,
+        "MAP": 0.41666666666666663
+      }
+    },
+    "raylib": {
+      "constants_moved": {},
+      "lopo": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      },
+      "shipped": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      }
+    },
+    "sokol": {
+      "constants_moved": {},
+      "lopo": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      },
+      "shipped": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      }
+    },
+    "soloud": {
+      "constants_moved": {},
+      "lopo": {
+        "NDCG@5": 0.5,
+        "MAP": 0.5416666666666666
+      },
+      "shipped": {
+        "NDCG@5": 0.5,
+        "MAP": 0.5416666666666666
+      }
+    },
+    "wren": {
+      "constants_moved": {},
+      "lopo": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      },
+      "shipped": {
+        "NDCG@5": 1.0,
+        "MAP": 1.0
+      }
+    }
+  },
+  "all_folds_zero_movement": true,
+  "macro_under_lopo": {
+    "NDCG@5": 0.8561,
+    "MAP": 0.8167
+  }
+}

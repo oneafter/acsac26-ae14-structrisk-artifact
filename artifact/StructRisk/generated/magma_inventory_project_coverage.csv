@@ -1,0 +1,10 @@
+project,inventory_bug_records,inventory_distinct_cves,inventory_high_or_critical_cves,unified_findings,unified_high_or_critical_positives,unified_distinct_bug_ids,unified_distinct_cves,unified_high_or_critical_cves,cve_coverage_pct,high_or_critical_cve_coverage_pct
+libpng,7,6,3,4,1,4,3,1,50.0,33.3
+libsndfile,18,13,6,1,0,1,0,0,0.0,0.0
+libtiff,14,13,7,9,6,9,8,5,61.5,71.4
+libxml2,17,15,10,6,5,6,6,5,40.0,50.0
+lua,4,3,1,1,0,1,1,0,33.3,0.0
+openssl,20,20,12,5,4,4,4,3,20.0,25.0
+php,16,16,16,3,3,3,3,3,18.8,18.8
+poppler,22,19,10,12,5,12,10,5,52.6,50.0
+sqlite3,20,20,19,8,7,8,8,7,40.0,36.8

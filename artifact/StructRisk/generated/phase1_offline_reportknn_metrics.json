@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "HighRisk@5": 3,
+    "NDCG@5": 0.5296,
+    "HighRisk@10": 4,
+    "NDCG@10": 0.4171,
+    "Rank-to-First-HighRisk": 2,
+    "Effort-to-First-HighRisk": 16.28,
+    "Effort-per-HighRisk": 54.73
+  },
+  "k": 5
+}

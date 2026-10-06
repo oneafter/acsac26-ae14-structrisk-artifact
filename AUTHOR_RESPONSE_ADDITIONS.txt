@@ -1,0 +1,32 @@
+Author-Response Additions Manifest
+==================================
+
+Files added during the ACSAC 2026 author-response phase (r3/r4). Any future
+re-staging of this package MUST retain all of the following alongside the
+original canonical files:
+
+Scripts (artifact/StructRisk/scripts/):
+  phase1_signal_constant_sensitivity.py
+  phase1_theta_optimality.py
+  phase1_constant_eval_tuning_check.py
+  phase1_constant_lopo_check.py
+  phase1_view_ablation.py
+
+Canonical outputs (artifact/StructRisk/generated/):
+  phase1_signal_constant_sensitivity.json / .md
+  phase1_theta_optimality.json
+  phase1_constant_eval_tuning_check.json
+  phase1_constant_lopo_check.json
+  phase1_view_ablation.json / .md
+  phase1_view_ablation_report.md
+  phase1_within_core_significance.json / .md
+
+Modified during the response phase:
+  artifact/StructRisk/scripts/phase1_within_project_significance.py (--target)
+  artifact/StructRisk/scripts/structrisk_rank.py (calibrated mode removed;
+    provenance note)
+  artifact/StructRisk/generated/phase1_offline_manual_weights.json (provenance)
+  artifact/StructRisk/artifact_2026/verify_paper_claims.py (core-target checks)
+  artifact/StructRisk/artifact_2026/PAPER_CLAIMS.json
+    (within_core_vs_public_{ndcg5,map}_p)
+  claims/claim3_ablation_sensitivity/run.sh (+ signal-constant envelope check)

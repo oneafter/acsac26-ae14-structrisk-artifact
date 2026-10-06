@@ -1,0 +1,13 @@
+Claim 3: Structured-core ablation and fixed-prior sensitivity
+=============================================================
+
+The six StructRisk signals are complementary. Removing Weak causes the largest
+global drop, reducing HR@10 from 8 to 5 and NDCG@10 from 0.8522 to 0.5965. A
+77-variant sign-preserving +/-20% perturbation audit keeps structured-core WP
+NDCG@5/MAP within 0.8534--0.8622 / 0.8075--0.8250 and LCR NDCG@5/MAP within
+0.8717--0.9023 / 0.8333--0.8750.
+
+Canonical outputs:
+
+  artifact/StructRisk/generated/phase1_ablation.json
+  artifact/StructRisk/generated/phase1_weight_sensitivity.json

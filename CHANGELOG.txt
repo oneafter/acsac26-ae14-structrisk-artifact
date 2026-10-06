@@ -1,0 +1,59 @@
+StructRisk Reviewer Artifact Changelog
+======================================
+
+2026-08-21-r4-author-response
+
+  - Added phase1_view_ablation.py and canonical outputs: deterministic
+    evidence-view sensitivity analysis (leave-one-view-out, single-view, and
+    grouped cards) answering Reviewer C; verifies the unmasked ranking is
+    byte-identical to the canonical order before evaluating variants.
+  - Added phase1_constant_lopo_check.py: leave-one-project-out recalibration
+    of the rule constants (the Sec. 4.1 discipline applied to StackDedup-kNN).
+    Every Dev fold moves zero constants, so the 10-project within-project
+    result is unchanged under LOPO.
+  - Parameterized phase1_within_project_significance.py with a --target
+    option and shipped generated/phase1_within_core_significance.{json,md}:
+    the structured core (no LLM) vs Public-Severity within-project exact
+    tests (NDCG@5 p=0.0049, MAP p=0.0049), cited as fact (3) in the author
+    response. PAPER_CLAIMS.json gained within_core_vs_public_{ndcg5,map}_p
+    and the verifier recomputes and checks both.
+  - No canonical dataset, label, split, ranking, cached model response, or
+    paper-table value was changed.
+
+2026-08-20-r3-author-response
+
+  - Added phase1_signal_constant_sensitivity.py and its canonical outputs:
+    a +/-20% structure-preserving perturbation audit over every
+    signal-extraction constant (58 variants, theta fixed), cited in the
+    author response. claim3 now recomputes and checks its envelope.
+  - Added phase1_theta_optimality.py: a 31,104-point sign-preserving grid
+    check showing the paper theta is grid-optimal on no slice (Dev, Eval,
+    or combined), with the Dev-optimal theta collapsing on Eval.
+  - Added phase1_constant_eval_tuning_check.py: a two-sided
+    unclaimed-headroom check (like-for-like reconstruction of the original
+    calibration search; the original script is not bundled) showing zero
+    Dev headroom and immediate Eval headroom for the rule constants.
+  - Updated the shipped weights-file provenance note (theta hand-set from
+    domain experience; rule constants calibrated by scripted search on the
+    development split; everything frozen before evaluation).
+  - Removed the unused experimental calibrated mode (grid coordinate descent)
+    from structrisk_rank.py and its dormant call sites in
+    phase1_offline_experiment.py / phase1_within10_experiment.py. No reported
+    number ever used this mode; no calibrated output was ever shipped; the
+    canonical fixed-prior weights file is byte-identical.
+  - No canonical dataset, label, split, ranking, cached model response,
+    metric, or paper claim was changed. All 169 verifier checks still pass.
+
+2026-07-15-r2-maintenance
+
+  - Added a non-destructive verifier for submitted-PDF Tables 3--6.
+  - Added exact paper-claim expectations keyed to the submitted PDF SHA-256.
+  - Fixed the Public-Severity rerun to use the already-shipped anonymized CVSS
+    summary; all 18 Eval-project scores and paper metrics remain unchanged.
+  - Made CASR replay opt-in by default, matching the documented package scope.
+  - Updated claim entry points to recompute results rather than only assert
+    cached JSON values.
+  - Added version, reproducibility-scope, tree, checksum, and package metadata.
+
+For the releases through r4 above, no canonical dataset, label, split,
+ranking, cached model response, metric, or paper claim was changed.

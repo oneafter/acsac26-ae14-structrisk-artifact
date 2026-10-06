@@ -1,0 +1,34 @@
+How to Use This Artifact
+========================
+
+1. Run the installation/environment check:
+
+     ./install.sh
+
+2. Run the paper-level quick check from the packaged artifact:
+
+     bash verify_paper_claims.sh all
+
+   Regenerated outputs and a machine-readable report are written below
+   reproduced/all/. Canonical files under artifact/StructRisk/generated/ are
+   never overwritten by this verifier.
+
+3. Run claim-specific recomputation checks from the package root:
+
+     bash claims/claim1_global_queue/run.sh
+     bash claims/claim2_within_project/run.sh
+     bash claims/claim3_ablation_sensitivity/run.sh   # ablation + signal-constant audit
+     bash claims/claim4_magma_validation/run.sh
+
+Expected running time on a commodity laptop is typically a few seconds for the
+default all-claims check. The optional full global permutation/bootstrap run is
+slower and can be enabled with:
+
+     bash verify_paper_claims.sh global --full-statistics --bootstrap-rounds 20000
+
+The scripts do not contact network services or query LLM APIs.
+
+The claim scripts recompute paper metrics from shipped finding-level inputs and
+ranked records. Raw fuzzing campaigns, closed-model response generation, full
+CASR replay environments, and public PoC archives are intentionally outside the
+default package. See REPRODUCIBILITY_STATUS.md for details.

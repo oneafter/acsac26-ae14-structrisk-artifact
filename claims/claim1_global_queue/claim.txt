@@ -1,0 +1,14 @@
+Claim 1: Global queue ranking
+=============================
+
+The structured StructRisk scorer places 5 HIGH positives in the global top 5 and
+8 HIGH positives in the global top 10 on the 78-finding held-out evaluation
+queue, with NDCG@5 = 1.0000 and NDCG@10 = 0.8522. The NDCG@10 improvement
+over ASan-Severity is significant at the 0.05 level (p = 0.0254). The HR@10
+improvement does not reach significance at the 0.05 level (p = 0.0527).
+
+Canonical outputs:
+
+  artifact/StructRisk/generated/phase1_offline_manual_metrics.json
+  artifact/StructRisk/generated/phase1_offline_asan_metrics.json
+  artifact/StructRisk/generated/phase1_offline_significance.json

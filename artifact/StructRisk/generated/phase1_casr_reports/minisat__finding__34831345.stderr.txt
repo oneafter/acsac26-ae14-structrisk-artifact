@@ -1,0 +1,4 @@
+Error: Couldn't launch "./build/release/bin/minisat" "/src/minisat/afl_out/default/crashes/id:000000,sig:06,src:disclose,time:0,execs:0,op:imported,rep:1" "/dev/null"
+
+Caused by:
+    No such file or directory (os error 2)
